@@ -1,10 +1,10 @@
-name: lefoy - front-end web developer
-description: Front-End Web developer from Quebec City
-meta_description: "Front-End Web developer from Quebec City"
+name: lefoy
+description: Web developer from Quebec City
+meta_description: "Web developer from Quebec City"
 
 markdown: redcarpet
 pygments: true
-logo: true
+logo: logo.png
 paginate: 15
 
 # Details for the RSS feed generator
