@@ -20,12 +20,3 @@ author: 'lefoy'
 
 # Github informations
 repository: 'https://github.com/lefoy/lefoy.github.io'
-
-# Default settings
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
