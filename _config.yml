@@ -4,7 +4,7 @@ meta_description: "Web developer from Quebec City"
 
 markdown: redcarpet
 pygments: true
-logo: /logo.png
+logo: /assets/images/logo.png
 paginate: 15
 
 # Details for the RSS feed generator
