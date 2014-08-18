@@ -1,12 +1,30 @@
+# Site informations
 name: lefoy
 description: Web developer from Quebec City
 meta_description: "Web developer from Quebec City"
 
+# Personal informations
+github: lefoy
+twitter: louisetiennefoy
+stackoverflow: lefoy
+
+# Site settings
 markdown: redcarpet
 pygments: true
 logo: /assets/images/logo.jpg
 paginate: 15
 
 # Details for the RSS feed generator
-url:            'lefoy.net'
-author:         'lefoy'
+url: 'lefoy.net'
+author: 'lefoy'
+
+# Github informations
+repository: 'https://github.com/lefoy/lefoy.github.io'
+
+# Default settings
+defaults:
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
