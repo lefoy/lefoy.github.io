@@ -10,7 +10,7 @@ stackoverflow: lefoy
 
 # Site settings
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 logo: /assets/images/logo.jpg
 paginate: 15
 
