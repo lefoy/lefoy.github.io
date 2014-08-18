@@ -1,12 +1,12 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: lefoy - front-end web developer
+description: Front-End Web developer from Quebec City
+meta_description: "Front-End Web developer from Quebec City"
 
 markdown: redcarpet
 pygments: true
-logo: false
+logo: true
 paginate: 15
 
 # Details for the RSS feed generator
-url:            'blog url'
-author:         'Your Name'
+url:            'lefoy.net'
+author:         'lefoy'
