@@ -1,22 +1,24 @@
-# Site informations
-name: lefoy
-description: Web developer from Quebec City
-meta_description: "Web developer from Quebec City"
+# Dependencies
+markdown:         redcarpet
+pygments:         true
 
-# Personal informations
-github: lefoy
-twitter: louisetiennefoy
-stackoverflow: lefoy
+# Permalinks
+permalink:        pretty
 
-# Site settings
-markdown: redcarpet
-pygments: true
-logo: /assets/images/logo.jpg
-paginate: 15
+# Setup
+title:            lefoy
+tagline:          'A Jekyll theme'
+description:      "I'm a front-end Web developer from Quebec City, Canada."
+url:              http://lefoy.net
 
-# Details for the RSS feed generator
-url: 'lefoy.net'
-author: 'lefoy'
+author:
+  name:           'lefoy'
+  url:            https://github.com/lefoy
 
-# Github informations
-repository: 'https://github.com/lefoy/lefoy.github.io'
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/lefoy/lefoy.github.io
