@@ -1,0 +1,24 @@
+# Dependencies
+##markdown        : redcarpet
+##highlighter     : pigments
+
+# Permalinks
+##permalink       : pretty
+
+# Setup
+title           : lefoy
+description     : "I'm a front-end Web developer from Quebec City, Canada."
+keywords        : "lefoy lefoy.net louisetiennefoy louisetienne foy web front-end frontend integrateur developer developpeur"
+url             : http://lefoy.net
+
+author          : lefoy
+name            : "lefoy"
+url             : https://github.com/lefoy
+
+paginate        : 5
+
+# Custom vars
+version         : 1.0.0
+
+github          :
+repo            : https://github.com/lefoy/lefoy.github.io

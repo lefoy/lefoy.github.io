@@ -1,0 +1,26 @@
+/* No files to import found in vendor/* */
+/*=================================
+=            Variables            =
+=================================*/
+/*============================
+=            Base            =
+============================*/
+/* line 5, ../sass/_base.scss */
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+/* line 9, ../sass/_base.scss */
+a {
+  color: #b1b1b1;
+}
+
+/*==============================
+=            Layout            =
+==============================*/
+/* line 5, ../sass/_layout.scss */
+.page-container {
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
