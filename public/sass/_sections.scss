@@ -12,7 +12,11 @@
 }
 
 .section.home {
-    padding: 175px 0 100px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 1920px;
+    min-height: 500px;
+    padding: 0;
     background-image: url(/public/img/bg-section-home.jpg);
     background-attachment: fixed;
     background-position: center;
