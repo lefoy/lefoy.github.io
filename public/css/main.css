@@ -614,9 +614,10 @@ p.heading {
 .section .section-content {
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* line 14, ../sass/_sections.scss */
+/* line 15, ../sass/_sections.scss */
 .section.home {
   display: table-cell;
   vertical-align: middle;
@@ -628,7 +629,7 @@ p.heading {
   background-position: center;
   background-size: cover;
 }
-/* line 24, ../sass/_sections.scss */
+/* line 25, ../sass/_sections.scss */
 .section.home:before {
   content: "";
   display: block;
@@ -643,20 +644,20 @@ p.heading {
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
   background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
-/* line 34, ../sass/_sections.scss */
+/* line 35, ../sass/_sections.scss */
 .section.home .section-content {
   z-index: 1;
   position: relative;
   text-align: center;
 }
-/* line 38, ../sass/_sections.scss */
+/* line 39, ../sass/_sections.scss */
 .section.home .section-content p {
   font: 2rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
 }
 
-/* line 46, ../sass/_sections.scss */
+/* line 47, ../sass/_sections.scss */
 .section.citation {
   padding: 100px 0;
   background-image: url(/public/img/bg-section-citation.jpg);
@@ -664,7 +665,7 @@ p.heading {
   background-position: center;
   background-size: cover;
 }
-/* line 52, ../sass/_sections.scss */
+/* line 53, ../sass/_sections.scss */
 .section.citation:before {
   content: "";
   display: block;
@@ -679,24 +680,24 @@ p.heading {
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
   background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
-/* line 62, ../sass/_sections.scss */
+/* line 63, ../sass/_sections.scss */
 .section.citation p {
   font: 1.625rem "Montserrat", Arial, sans-serif;
   font-style: italic;
   color: #fff;
 }
-/* line 67, ../sass/_sections.scss */
+/* line 68, ../sass/_sections.scss */
 .section.citation p:before, .section.citation p:after {
   content: "\"";
 }
 
-/* line 73, ../sass/_sections.scss */
+/* line 74, ../sass/_sections.scss */
 .section.stats {
   display: table;
   padding: 0;
   border-collapse: collapse;
 }
-/* line 77, ../sass/_sections.scss */
+/* line 78, ../sass/_sections.scss */
 .section.stats .stats-section {
   display: table-cell;
   vertical-align: middle;
@@ -705,60 +706,64 @@ p.heading {
   text-align: center;
   border: 1px solid #e2e2e2;
 }
-/* line 84, ../sass/_sections.scss */
+/* line 85, ../sass/_sections.scss */
 .section.stats .stats-section a {
   text-decoration: none;
   color: inherit;
 }
-/* line 88, ../sass/_sections.scss */
+/* line 89, ../sass/_sections.scss */
 .section.stats .stats-section .stat-value {
   font: 4.5rem "Montserrat", Arial, sans-serif;
 }
-/* line 91, ../sass/_sections.scss */
+/* line 92, ../sass/_sections.scss */
 .section.stats .stats-section .stat-label {
   font: 700 1rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
 }
 
-/* line 98, ../sass/_sections.scss */
+/* line 99, ../sass/_sections.scss */
 .section.contact {
   background-color: #ececec;
 }
 
-/* line 102, ../sass/_sections.scss */
+/* line 103, ../sass/_sections.scss */
 .section.copyright {
   padding: 20px 0 16px;
   color: #646464;
   border-top: 1px solid #242424;
   background-color: #181818;
 }
-/* line 107, ../sass/_sections.scss */
+/* line 108, ../sass/_sections.scss */
 .section.copyright p {
   float: left;
   width: 50%;
   font: 0.875rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 113, ../sass/_sections.scss */
+/* line 114, ../sass/_sections.scss */
 .section.copyright .social {
   float: right;
   width: 50%;
   text-align: right;
 }
-/* line 117, ../sass/_sections.scss */
+/* line 118, ../sass/_sections.scss */
+.section.copyright .social .social-element a:before {
+  background-color: #2e2e2e;
+}
+/* line 121, ../sass/_sections.scss */
 .section.copyright .social .social-element + .social-element {
-  padding-left: 15px;
-  border-left: 1px solid #242424;
+  padding-left: 0;
+  border-left: none;
 }
 
-/* line 124, ../sass/_sections.scss */
+/* line 128, ../sass/_sections.scss */
 .social {
   margin: 0;
   padding: 0;
   font-size: 0;
   list-style-type: none;
 }
-/* line 129, ../sass/_sections.scss */
+/* line 133, ../sass/_sections.scss */
 .social .social-element {
   display: inline-block;
   padding: 0;
@@ -766,7 +771,7 @@ p.heading {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 135, ../sass/_sections.scss */
+/* line 139, ../sass/_sections.scss */
 .social .social-element .bg-hover:before {
   top: 50%;
   left: 50%;
@@ -775,7 +780,7 @@ p.heading {
   margin-top: -25px;
   margin-left: -25px;
 }
-/* line 144, ../sass/_sections.scss */
+/* line 148, ../sass/_sections.scss */
 .social .social-element + .social-element {
   margin-left: 15px;
   padding-left: 15px;
