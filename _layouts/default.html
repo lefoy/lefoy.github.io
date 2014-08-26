@@ -23,17 +23,29 @@
     <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/public/css/odometer.css">
     <link rel="stylesheet" href="/public/css/main.css">
 </head>
 
 <body>
-    <div class="page-container">
 
-        {% include navigation.html %}
+    {{ content }}
 
-        {{ content }}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/vendor/jquery.inview.min.js"></script>
+    <script type="text/javascript" src="/public/js/vendor/odometer.min.js"></script>
+    <script type="text/javascript" src="/public/js/main.js"></script>
 
-    </div>
-  </body>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-39044571-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
 </html>

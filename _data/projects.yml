@@ -1,0 +1,5 @@
+- name: Cyanide Theme for Sublime Text
+  github: https://github.com/lefoy/cyanide-theme
+
+- name: Basic project with Grunt and Sass
+  github: https://github.com/lefoy/basic-grunt-sass-project

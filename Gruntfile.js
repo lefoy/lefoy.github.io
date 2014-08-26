@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 
         watch: {
             jekyll: {
-                files: ['**/*.{html, md, yml}'],
+                files: ['**/*.{html, md, yml, js}'],
                 tasks: ['exec:build']
             },
             compass: {

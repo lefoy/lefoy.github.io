@@ -1,0 +1,29 @@
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin hw_accelerate {
+    -webkit-transform: translateZ(0) translate3D(0,0,0);
+       -moz-transform: translateZ(0) translate3D(0,0,0);
+        -ms-transform: translateZ(0) translate3D(0,0,0);
+         -o-transform: translateZ(0) translate3D(0,0,0);
+            transform: translateZ(0) translate3D(0,0,0);
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
