@@ -1,0 +1,12 @@
+<div class="section posts background">
+    <div class="section-container">
+        {% for post in site.posts limit:5 %}
+            <div class="post-single">
+               <span>{{ post.date | date_to_long_string }}</span>
+               <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+           </div>
+        {% endfor %}
+
+        <a href="/blog.html" class="button">Read more</a>
+    </div>
+</div>

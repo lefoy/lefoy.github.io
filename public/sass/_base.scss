@@ -18,12 +18,27 @@ body {
 }
 
 h1 {
-    margin-top: 20px;
-    margin-bottom: 100px;
-    font: rem(72px) "Montserrat", Arial, sans-serif;
+    display: inline-block;
+    margin: 0;
+    padding: 0 .15em;
+    font: rem(54px) "Montserrat", Arial, sans-serif;
+    text-transform: uppercase;
     color: #fff;
-    //text-shadow: 1px 1px 5px rgba(150, 150, 150, 1);
-    cursor: default;
+    background: #000;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.tagline {
+    display: inline-block;
+    margin-top: 0;
+    padding: 0 .15em;
+    font: rem(32px) "Montserrat", Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000;
 }
 
 h2 {
@@ -31,12 +46,33 @@ h2 {
     font: rem(26px) "Montserrat", Arial, sans-serif;
     letter-spacing: 3px;
     text-transform: uppercase;
+    a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        &:after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin-top: 5px;
+            margin-bottom: -8px;
+            background-color: #000;
+            @include transition-property(all);
+            @include transition-duration(300ms);
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
     &:after {
         content: "";
         display: block;
         width: 40px;
         height: 3px;
         margin-top: 5px;
+        margin-bottom: -8px;
         background-color: #000;
     }
 }
@@ -85,5 +121,53 @@ p {
         letter-spacing: 1px;
         text-transform: uppercase;
         color: #000;
+    }
+}
+
+.button {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    margin: 20px 0;
+    padding: 12px 25px;
+    font: rem(16px) "Montserrat", Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    border: none;
+    border: 3px solid #000;
+    background-color: transparent;
+    @include hw_accelerate();
+    @include transition-property(all);
+    @include transition-duration(200ms);
+    &.white {
+        color: #fff;
+        border: 3px solid #fff;
+        &:hover {
+            color: #000;
+        }
+        &:before {
+            background-color: #fff;
+        }
+    }
+    &:before {
+        content: "";
+        display: block;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        @include scale(0);
+        @include transition-property(all);
+        @include transition-duration(200ms);
+    }
+    &:hover {
+        color: #fff;
+    }
+    &:hover:before {
+        @include scale(1);
     }
 }

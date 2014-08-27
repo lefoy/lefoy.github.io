@@ -3,108 +3,16 @@ layout: default
 title: Home
 ---
 
-<div class="section home">
-    <div class="section-content">
-        <div class="logo"><img src="/public/img/logo.jpg" alt="Logo"></div>
-        <!-- <h1>{{ site.name }}</h1> -->
-        <p class="tagline">Work in progress</p>
-        <ul class="social">
-            {% for media in site.data.social %}
-                <li class="social-element {{ media.name }}">
-                    <a href="{{ media.url }}" class="bg-hover">
-                        <i class="fa fa-{{ media.name }}"></i>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+{% include home.html class="fullheight" %}
 
-<div class="section about">
-    <div class="section-content">
-        {% include about.html %}
-    </div>
-</div>
+{% include about.html %}
 
-<div class="section citation">
-    <div class="section-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, iste!</p>
-    </div>
-</div>
+{% include blog-short-list.html %}
 
-<div class="section projects">
-    <div class="section-content">
-        {% include projects.html %}
-    </div>
-</div>
+{% include projects.html %}
 
-<div class="section stats">
-    {% for stat in site.data.stats %}
-        <div class="stats-section">
-            <a href="{{ stat.url }}">
-                <div class="stat-value odometer" data-number="{{ stat.value }}">0</div>
-                <div class="stat-label">{{ stat.label }}</div>
-            </a>
-        </div>
-    {% endfor %}
-</div>
+<!-- {% include contact.html %} -->
 
-<div class="section contact">
-    <div class="section-content">
-        {% include contact.html %}
-    </div>
-</div>
+{% include stats.html %}
 
-<div class="section copyright">
-    <div class="section-content clearfix">
-        <p>{{ site.copyright }}</p>
-        <ul class="social clearfix">
-            {% for media in site.data.social %}
-                <li class="social-element {{ media.name }}">
-                    <a href="{{ media.url }}" class="bg-hover">
-                        <i class="fa fa-{{ media.name }}"></i>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-
-<!-- <div class="section projects">
-    {% for project in site.data.projects %}
-        <div class="slide project">
-            <a href="{{ project.github }}">
-                {{ project.name }}
-            </a>
-        </div>
-    {% endfor %}
-</div> -->
-
-<!-- <div class="section posts">
-    <div class="section-container">
-            {% for post in paginator.posts %}
-                <div class="slide post">
-                    <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-
-                    <span class="post-date">{{ post.date | date_to_long_string }}</span>
-
-                    {{ post.content }}
-                </div>
-            {% endfor %}
-    </div>
-</div> -->
-
-<!-- Pagination links -->
-<!-- <div class="pagination">
-    {% if paginator.previous_page %}
-        <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
-    {% else %}
-        <span class="previous">Previous</span>
-    {% endif %}
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="next">Next</a>
-    {% else %}
-        <span class="next">Next</span>
-    {% endif %}
-</div> -->
+{% include footer.html %}

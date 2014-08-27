@@ -1,5 +1,17 @@
-- name: Cyanide Theme for Sublime Text
-  github: https://github.com/lefoy/cyanide-theme
+- id: cyanide
+  name: Cyanide Theme for Sublime Text
+  description: "Minimal dark theme for Sublime Text 3"
+  icon: ['github']
+  url: https://github.com/lefoy/cyanide-theme
 
-- name: Basic project with Grunt and Sass
-  github: https://github.com/lefoy/basic-grunt-sass-project
+- id: automaticfullscreen
+  name: AutomaticFullscreen for Sublime Text
+  description: "Sublime Text plugin to start in fullscreen mode"
+  icon: ['github']
+  url: https://github.com/lefoy/AutomaticFullscreen
+
+- id: basic-grunt-sass
+  name: Basic project
+  description: "Basic project with Grunt, Sass and Compass."
+  icon: ['github']
+  url: https://github.com/lefoy/basic-grunt-sass-project

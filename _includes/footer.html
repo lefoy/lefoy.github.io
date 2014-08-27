@@ -1,0 +1,14 @@
+<div class="section copyright">
+    <div class="section-content clearfix">
+        <p>{{ site.copyright }}</p>
+        <ul class="social clearfix">
+            {% for media in site.data.social %}
+                <li class="social-element {{ media.name }}">
+                    <a href="{{ media.url }}" class="bg-hover">
+                        <i class="fa fa-{{ media.name }}"></i>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

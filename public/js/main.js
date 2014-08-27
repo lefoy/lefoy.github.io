@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    $('.section.home').height( $(window).height() );
+    $('.section.home.fullheight').css('padding', 0).find('.section-content').height($(window).height());
     $(window).on('resize', function(event) {
-        $('.section.home').height( $(window).height() );
+        $('.section.home.fullheight').css('padding', 0).find('.section-content').height($(window).height());
     });
 
     $('.section.stats').bind('inview', function(event, isInView) {

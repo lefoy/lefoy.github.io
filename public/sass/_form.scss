@@ -1,0 +1,94 @@
+/*=============================
+=            Forms            =
+=============================*/
+
+input[type="text"],
+textarea,
+button {
+    outline: none;
+}
+
+form {
+    margin-top: 40px;
+}
+
+input[type="text"] {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    width: 49.75%;
+    height: 41px;
+    padding: 0;
+    font-family: "Source Code Pro";
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 41px;
+    border: none;
+    border-bottom: 1px dashed #000;
+    outline: none;
+    background: transparent;
+}
+
+textarea {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 243px;
+    padding: 0;
+    font-family: "Source Code Pro";
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 41px;
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+}
+
+.lines-wrapper {
+    position: relative;
+    margin: 0 0 30px;
+}
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 243px;
+    .line {
+        display: block;
+        height: 40px;
+        border-bottom: 1px dashed #000;
+    }
+}
+
+.submit {
+    position: relative;
+    float: right;
+    padding: 12px 25px;
+    font: 700 1rem "Montserrat", Arial, sans-serif;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    background-color: transparent;
+    @include hw_accelerate();
+    &:before {
+        content: "";
+        display: block;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        @include scale(0);
+        @include transition-property(all);
+        @include transition-duration(200ms);
+        @include transition-timing-function(cubic-bezier(.25,.25,.325,1.39));
+    }
+    &:hover:before {
+        @include scale(1);
+    }
+}

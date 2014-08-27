@@ -1,3 +1,19 @@
-<h2>Projects</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quo fugiat accusamus. Repellendus fugiat cumque doloribus quisquam, ipsam voluptatem laudantium ratione ea voluptate modi, facere iure consequuntur debitis blanditiis! Culpa rem perferendis suscipit obcaecati facere numquam, doloribus. Inventore accusamus debitis nisi molestias animi, dolor placeat sint, expedita aspernatur totam nemo? Accusantium fugiat, iste laudantium quibusdam nemo nihil rem dolores placeat! Odio sequi dolorem, reiciendis quos laborum enim atque commodi eos odit tenetur facilis quasi autem amet. Libero quia nihil perspiciatis perferendis explicabo eveniet deserunt corrupti fuga eos dolor voluptatem cupiditate debitis porro officiis sed animi dolorem ex, eligendi facilis neque!</p>
-<p>Cumque labore illum odio distinctio dolor praesentium provident veritatis voluptas, culpa nihil repellat optio voluptatem nobis recusandae eaque inventore sed ea. Minima adipisci dolore ex sint blanditiis quaerat, magni voluptatem inventore quae suscipit harum commodi, impedit officiis, dolor cumque rem voluptate modi aliquid laborum omnis rerum consequuntur. Fuga aut odio reiciendis aliquid non dicta, nemo omnis! Amet quo cumque, ipsa ut maxime impedit, recusandae laboriosam praesentium, asperiores, quasi totam aut. Illum voluptatum nisi facilis enim. Voluptatem nisi doloremque autem ab dignissimos necessitatibus fuga cupiditate odio, veritatis repudiandae magnam quos, suscipit non. Optio ipsum, commodi molestiae consectetur aliquid voluptates fuga corrupti.</p>
+{% for project in site.data.projects %}
+    <div class="section project project-{{ project.id }}">
+        <div class="section-content">
+            <h2>
+            <a href="{{ project.url }}">
+                {{ project.name }}
+                {% if project.icon And project.icon != "" And project.icon != nil %}
+                    {% for icon in project.icon %}
+                        <i class="fa fa-{{ icon }}"></i>
+                    {% endfor %}
+                {% endif %}
+            </a>
+            </h2>
+            {% if project.description And project.description != "" And project.description != nil %}
+                <p>{{ project.description }}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}

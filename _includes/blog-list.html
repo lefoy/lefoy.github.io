@@ -1,0 +1,10 @@
+<div class="section posts">
+    <div class="section-container">
+        {% for post in site.posts %}
+            <div class="post-single">
+               <span>{{ post.date | date_to_long_string }}</span>
+               <h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+           </div>
+        {% endfor %}
+    </div>
+</div>

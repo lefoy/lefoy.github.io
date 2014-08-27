@@ -8,13 +8,13 @@ author          : lefoy
 name            : "lefoy"
 url             : https://github.com/lefoy
 
-tagline         : "I'm a front-end Web developer from Quebec City, Canada"
+tagline         : "front-end web developer"
 copyright       : "© 2014 lefoy - All rights reserved"
-
-paginate        : 5
 
 # Custom vars
 version         : 1.0.0
+markdown        : redcarpet
+highlighter     : pygments
 
 github          :
 repo            : https://github.com/lefoy/lefoy.github.io
