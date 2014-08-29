@@ -99,7 +99,7 @@
         background-position: center;
         background-size: cover;
     }
-    &:before {
+    &.short-list &:before {
         content: "";
         display: block;
         position: absolute;

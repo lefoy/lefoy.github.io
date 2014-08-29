@@ -1,6 +1,26 @@
+@function remove-px( $target ) {
+    @if not unitless( $target ) {
+        @return $target / 1px ;
+    } @else {
+        @return $target;
+    }
+}
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+
 @function rem($size) {
-    $remSize: $size / 16px;
-    @return #{$remSize}rem;
+    $values: ();
+    @if type-of( $size ) == list {
+        @each $current in $size {
+            $values: append( $values, remove-px($current) / 16 * 1rem);
+        }
+    } @else {
+        $values: remove-px($size) / 16 * 1rem;
+    }
+    @return $values;
 }
 
 @mixin hw_accelerate {

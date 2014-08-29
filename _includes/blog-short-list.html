@@ -1,4 +1,5 @@
-<div class="section posts background">
+{% if site.posts.size > 0 %}
+<div class="section posts short-list background">
     <div class="section-container">
         {% for post in site.posts limit:5 %}
             <div class="post-single">
@@ -10,3 +11,4 @@
         <a href="/blog.html" class="button">Read more</a>
     </div>
 </div>
+{% endif %}

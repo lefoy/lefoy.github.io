@@ -82,7 +82,8 @@ img {
 }
 
 a {
-    color: #ccc;
+    font-weight: bold;
+    color: #000;
     &.bg-hover,
     p & {
         position: relative;
@@ -100,11 +101,15 @@ a {
             left: ($widthOffset / 2 * -1);
             width: calc(100% + #{$widthOffset});
             height: calc(100% + #{$heightOffset});
+            color: #fff;
             background-color: #000;
             @include scale(0);
             @include transition-property(all);
             @include transition-duration(200ms);
             @include transition-timing-function(cubic-bezier(.25,.25,.325,1.39));
+        }
+        &:hover {
+            color: #fff;
         }
         &:hover:before {
             @include scale(1);
