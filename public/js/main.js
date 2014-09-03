@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 
     $('.section.stats').bind('inview', function(event, isInView) {
-        if ( isInView ) {
+        if (isInView) {
             $('.odometer').each(function() {
                 var number = $(this).attr('data-number');
                 $(this).html(number);
@@ -14,4 +14,33 @@ $(document).ready(function() {
         }
     });
 
+    // Update github repositories stat
+    var lefoy = new Gh3.User("lefoy"),
+        lefoyRepositories = new Gh3.Repositories(lefoy);
+
+    lefoyRepositories.fetch({
+        page: 1,
+        per_page: 500,
+        direction: "desc"
+    }, "next", function() {
+        $('.odometer.repositories').attr('data-number', lefoyRepositories.repositories.length);
+    });
+
+    $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        url: "http://api.twittercounter.com/?twitter_id=556853137&apikey=b3abfbe5c76aec3fc59c426b0d51eeb0&output=JSONP&callback=getcount",
+        success: function (data) {
+            $('.odometer.followers').attr('data-number', data.followers_current);
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        dataType: "html",
+        url: "http://0.0.0.0:4000/?url=github.com/lefoy",
+        success: function (data) {
+            console.log(data);
+        }
+    });
 });

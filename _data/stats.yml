@@ -1,11 +1,7 @@
 - label: repositories
-  value: 10
+  value: 0
   url: https://github.com/lefoy?tab=repositories
 
-- label: tweets
-  value: 676
-  url: https://twitter.com/louisetiennefoy
-
 - label: followers
-  value: 374
+  value: 0
   url: https://twitter.com/louisetiennefoy
