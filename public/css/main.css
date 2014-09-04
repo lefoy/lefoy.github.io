@@ -1329,64 +1329,69 @@ ma
 .section.posts h2 {
   z-index: 1;
   position: relative;
+  color: #fff;
+}
+/* line 118, ../sass/_sections.scss */
+.section.posts h2 a:after {
+  background-color: #fff;
 }
 
-/* line 119, ../sass/_sections.scss */
+/* line 123, ../sass/_sections.scss */
 .section.project + .section.project {
   padding-top: 0;
 }
 
-/* line 123, ../sass/_sections.scss */
+/* line 127, ../sass/_sections.scss */
 .section.contact {
   background-color: #ececec;
 }
 
-/* line 127, ../sass/_sections.scss */
+/* line 131, ../sass/_sections.scss */
 .section.copyright {
   padding: 20px 0 16px;
   color: #646464;
   border-top: 1px solid #242424;
   background-color: #181818;
 }
-/* line 132, ../sass/_sections.scss */
+/* line 136, ../sass/_sections.scss */
 .section.copyright p {
   float: left;
   width: 50%;
   font: 0.875rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 138, ../sass/_sections.scss */
+/* line 142, ../sass/_sections.scss */
 .section.copyright .social {
   float: right;
   width: 50%;
   text-align: right;
 }
-/* line 142, ../sass/_sections.scss */
+/* line 146, ../sass/_sections.scss */
 .section.copyright .social a {
   color: #ccc;
 }
-/* line 145, ../sass/_sections.scss */
+/* line 149, ../sass/_sections.scss */
 .section.copyright .social .social-element a:before {
   background-color: #2e2e2e;
 }
-/* line 148, ../sass/_sections.scss */
+/* line 152, ../sass/_sections.scss */
 .section.copyright .social .social-element + .social-element {
   padding-left: 0;
   border-left: none;
 }
 
-/* line 155, ../sass/_sections.scss */
+/* line 159, ../sass/_sections.scss */
 .social {
   margin: 0;
   padding: 0;
   font-size: 0;
   list-style-type: none;
 }
-/* line 160, ../sass/_sections.scss */
+/* line 164, ../sass/_sections.scss */
 .social a {
   color: #fff;
 }
-/* line 163, ../sass/_sections.scss */
+/* line 167, ../sass/_sections.scss */
 .social .social-element {
   display: inline-block;
   padding: 0;
@@ -1394,7 +1399,7 @@ ma
   text-align: center;
   text-transform: uppercase;
 }
-/* line 169, ../sass/_sections.scss */
+/* line 173, ../sass/_sections.scss */
 .social .social-element .bg-hover:before {
   top: 50%;
   left: 50%;
@@ -1403,7 +1408,7 @@ ma
   margin-top: -25px;
   margin-left: -25px;
 }
-/* line 178, ../sass/_sections.scss */
+/* line 182, ../sass/_sections.scss */
 .social .social-element + .social-element {
   margin-left: 15px;
   padding-left: 15px;
