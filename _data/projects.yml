@@ -15,3 +15,9 @@
   description: "Basic project with Grunt, Sass and Compass."
   icon: ['github']
   url: https://github.com/lefoy/basic-grunt-sass-project
+
+- id: google-fonts
+  name: Google Fonts Online Preview
+  description: "Online preview for Google Fonts."
+  icon: ['github']
+  url: http://lefoy.net/google-fonts/
