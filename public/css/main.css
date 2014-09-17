@@ -834,67 +834,66 @@ html[xmlns] .clearfix {
 /* line 5, ../sass/_base.scss */
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;
+  background-image: url(/public/img/bg-section-home.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
-/* line 9, ../sass/_base.scss */
+/* line 13, ../sass/_base.scss */
 .logo {
   position: relative;
-  width: 150px;
+  max-width: 90%;
   margin: 0 auto 90px;
 }
-/* line 13, ../sass/_base.scss */
+/* line 17, ../sass/_base.scss */
 .logo img {
   z-index: 1;
   position: relative;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
 }
 
-/* line 20, ../sass/_base.scss */
+/* line 23, ../sass/_base.scss */
 h1 {
   display: inline-block;
   margin: 0;
-  padding: 0 .15em;
+  padding: 0 0.15em;
   font: 3.375rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
   background: #000;
 }
-/* line 28, ../sass/_base.scss */
+/* line 31, ../sass/_base.scss */
 h1 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 34, ../sass/_base.scss */
+/* line 37, ../sass/_base.scss */
 .tagline {
   display: inline-block;
   margin-top: 0;
-  padding: 0 .15em;
+  padding: 0 0.15em;
   font: 2rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
   background: #000;
 }
 
-/* line 44, ../sass/_base.scss */
+/* line 47, ../sass/_base.scss */
 h2 {
   margin-top: 0;
   font: 1.625rem "Montserrat", Arial, sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-/* line 49, ../sass/_base.scss */
+/* line 52, ../sass/_base.scss */
 h2 a {
   display: inline-block;
   position: relative;
   text-decoration: none;
   color: inherit;
 }
-/* line 54, ../sass/_base.scss */
+/* line 57, ../sass/_base.scss */
 h2 a:after {
   content: "";
   display: block;
@@ -912,11 +911,11 @@ h2 a:after {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 65, ../sass/_base.scss */
+/* line 68, ../sass/_base.scss */
 h2 a:hover:after {
   width: 100%;
 }
-/* line 69, ../sass/_base.scss */
+/* line 72, ../sass/_base.scss */
 h2:after {
   content: "";
   display: block;
@@ -927,17 +926,17 @@ h2:after {
   background-color: #000;
 }
 
-/* line 80, ../sass/_base.scss */
+/* line 83, ../sass/_base.scss */
 img {
   max-width: 100%;
 }
 
-/* line 84, ../sass/_base.scss */
+/* line 87, ../sass/_base.scss */
 a {
   font-weight: bold;
   color: #000;
 }
-/* line 88, ../sass/_base.scss */
+/* line 91, ../sass/_base.scss */
 a.bg-hover, p a {
   position: relative;
   white-space: nowrap;
@@ -948,7 +947,7 @@ a.bg-hover, p a {
   -o-transform: translateZ(0) translate3D(0, 0, 0);
   transform: translateZ(0) translate3D(0, 0, 0);
 }
-/* line 93, ../sass/_base.scss */
+/* line 96, ../sass/_base.scss */
 a.bg-hover:before, p a:before {
   content: "";
   display: block;
@@ -978,11 +977,11 @@ a.bg-hover:before, p a:before {
   -o-transition-timing-function: cubic-bezier(0.25, 0.25, 0.325, 1.39);
   transition-timing-function: cubic-bezier(0.25, 0.25, 0.325, 1.39);
 }
-/* line 111, ../sass/_base.scss */
+/* line 114, ../sass/_base.scss */
 a.bg-hover:hover, p a:hover {
   color: #fff;
 }
-/* line 114, ../sass/_base.scss */
+/* line 117, ../sass/_base.scss */
 a.bg-hover:hover:before, p a:hover:before {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
@@ -991,12 +990,13 @@ a.bg-hover:hover:before, p a:hover:before {
   transform: scale(1, 1);
 }
 
-/* line 120, ../sass/_base.scss */
+/* line 123, ../sass/_base.scss */
 p {
+  font-size: 1.25rem;
   font-weight: 300;
   color: #696969;
 }
-/* line 123, ../sass/_base.scss */
+/* line 127, ../sass/_base.scss */
 p.heading {
   margin: 40px 0 25px;
   font-family: "Montserrat", Arial, sans-serif;
@@ -1005,7 +1005,7 @@ p.heading {
   color: #000;
 }
 
-/* line 132, ../sass/_base.scss */
+/* line 136, ../sass/_base.scss */
 .button {
   display: inline-block;
   z-index: 1;
@@ -1033,20 +1033,20 @@ p.heading {
   -o-transition-duration: 200ms;
   transition-duration: 200ms;
 }
-/* line 148, ../sass/_base.scss */
+/* line 152, ../sass/_base.scss */
 .button.white {
   color: #fff;
   border: 3px solid #fff;
 }
-/* line 151, ../sass/_base.scss */
+/* line 155, ../sass/_base.scss */
 .button.white:hover {
   color: #000;
 }
-/* line 154, ../sass/_base.scss */
+/* line 158, ../sass/_base.scss */
 .button.white:before {
   background-color: #fff;
 }
-/* line 158, ../sass/_base.scss */
+/* line 162, ../sass/_base.scss */
 .button:before {
   content: "";
   display: block;
@@ -1071,11 +1071,11 @@ p.heading {
   -o-transition-duration: 200ms;
   transition-duration: 200ms;
 }
-/* line 172, ../sass/_base.scss */
+/* line 176, ../sass/_base.scss */
 .button:hover {
   color: #fff;
 }
-/* line 175, ../sass/_base.scss */
+/* line 179, ../sass/_base.scss */
 .button:hover:before {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
@@ -1088,12 +1088,12 @@ p.heading {
 =            Typography            =
 ==================================*/
 /* line 11, ../sass/_typo.scss */
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
+.section.posts .post-content h1,
+.section.posts .post-content h2,
+.section.posts .post-content h3,
+.section.posts .post-content h4,
+.section.posts .post-content h5,
+.section.posts .post-content h6 {
   padding: 0;
   line-height: auto;
   letter-spacing: 0;
@@ -1104,60 +1104,64 @@ p.heading {
 }
 /* line 21, ../sass/_typo.scss */
 ma
-.post-content h1:before, .post-content h1:after, ma
-.post-content h2:before,
-.post-content h2:after, ma
-.post-content h3:before,
-.post-content h3:after, ma
-.post-content h4:before,
-.post-content h4:after, ma
-.post-content h5:before,
-.post-content h5:after, ma
-.post-content h6:before,
-.post-content h6:after {
+.section.posts .post-content h1:before, .section.posts .post-content h1:after, ma
+.section.posts .post-content h2:before,
+.section.posts .post-content h2:after, ma
+.section.posts .post-content h3:before,
+.section.posts .post-content h3:after, ma
+.section.posts .post-content h4:before,
+.section.posts .post-content h4:after, ma
+.section.posts .post-content h5:before,
+.section.posts .post-content h5:after, ma
+.section.posts .post-content h6:before,
+.section.posts .post-content h6:after {
   content: none;
 }
 /* line 25, ../sass/_typo.scss */
-.post-content h1 {
-  margin: .67em 0 .4em;
+.section.posts .post-content h1 {
+  margin: 0.67em 0 0.4em;
   font-size: 3rem;
 }
 /* line 29, ../sass/_typo.scss */
-.post-content h2 {
-  margin: .75em 0 .7em;
+.section.posts .post-content h2 {
+  margin: 0.75em 0 0.7em;
   font-size: 2.25rem;
+  color: #000;
 }
-/* line 33, ../sass/_typo.scss */
-.post-content h3 {
-  margin: .83em 0 .78em;
+/* line 34, ../sass/_typo.scss */
+.section.posts .post-content h3 {
+  margin: 0.83em 0 0.78em;
   font-size: 1.75rem;
+  color: #000;
 }
-/* line 37, ../sass/_typo.scss */
-.post-content h4 {
+/* line 39, ../sass/_typo.scss */
+.section.posts .post-content h4 {
   margin: 1.12em 0 1.07em;
   font-size: 1.3125rem;
+  color: #000;
 }
-/* line 41, ../sass/_typo.scss */
-.post-content h5 {
+/* line 44, ../sass/_typo.scss */
+.section.posts .post-content h5 {
   margin: 1.5em 0 1.45em;
   font-size: 1.125rem;
+  color: #000;
 }
-/* line 46, ../sass/_typo.scss */
-.post-content p,
-.post-content li {
+/* line 50, ../sass/_typo.scss */
+.section.posts .post-content p,
+.section.posts .post-content li {
   font-size: 1.25rem;
   font-weight: 300;
   color: #696969;
 }
-/* line 51, ../sass/_typo.scss */
-.post-content blockquote {
+/* line 55, ../sass/_typo.scss */
+.section.posts .post-content blockquote {
   margin-left: 0;
   padding-left: 1.5em;
   font-style: italic;
   border-left: 6px solid #f7f7f7;
 }
-/* line 57, ../sass/_typo.scss */
-.post-content .highlight {
+/* line 61, ../sass/_typo.scss */
+.section.posts .post-content .highlight {
   overflow: auto;
   padding: 16px;
   font-size: 85%;
@@ -1165,8 +1169,8 @@ ma
   border-radius: 3px;
   background-color: #f7f7f7;
 }
-/* line 64, ../sass/_typo.scss */
-.post-content .highlight pre {
+/* line 68, ../sass/_typo.scss */
+.section.posts .post-content .highlight pre {
   margin: 0;
 }
 
@@ -1175,14 +1179,14 @@ ma
 ==============================*/
 /* line 5, ../sass/_layout.scss */
 .section-container {
-  width: 960px;
+  width: 780px;
   margin-right: auto;
   margin-left: auto;
 }
 
 /* line 11, ../sass/_layout.scss */
 .post-single + .post-single {
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
 /*==================================
@@ -1204,25 +1208,28 @@ ma
 =            Sections            =
 ================================*/
 /* line 5, ../sass/_sections.scss */
+.is404 {
+  padding: 100px 0;
+}
+/* line 8, ../sass/_sections.scss */
+.is404 p,
+.is404 a {
+  color: #fff;
+}
+
+/* line 13, ../sass/_sections.scss */
 .section {
   position: relative;
   padding: 100px 0;
 }
-/* line 8, ../sass/_sections.scss */
+/* line 16, ../sass/_sections.scss */
 .section .section-content {
-  max-width: 960px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* line 15, ../sass/_sections.scss */
-.section.home {
-  background-image: url(/public/img/bg-section-home.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-/* line 30, ../sass/_sections.scss */
+/* line 38, ../sass/_sections.scss */
 .section.home .section-content {
   display: table-cell;
   vertical-align: middle;
@@ -1233,7 +1240,12 @@ ma
   text-align: center;
 }
 
-/* line 41, ../sass/_sections.scss */
+/* line 49, ../sass/_sections.scss */
+.section.about {
+  background-color: #fff;
+}
+
+/* line 53, ../sass/_sections.scss */
 .section.citation {
   padding: 100px 0;
   background-image: url(/public/img/bg-section-citation.jpg);
@@ -1241,7 +1253,7 @@ ma
   background-position: center;
   background-size: cover;
 }
-/* line 47, ../sass/_sections.scss */
+/* line 59, ../sass/_sections.scss */
 .section.citation:before {
   content: "";
   display: block;
@@ -1256,24 +1268,25 @@ ma
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
   background-image: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
-/* line 57, ../sass/_sections.scss */
+/* line 69, ../sass/_sections.scss */
 .section.citation p {
   font: 1.625rem "Montserrat", Arial, sans-serif;
   font-style: italic;
   color: #fff;
 }
-/* line 62, ../sass/_sections.scss */
+/* line 74, ../sass/_sections.scss */
 .section.citation p:before, .section.citation p:after {
   content: "\"";
 }
 
-/* line 68, ../sass/_sections.scss */
+/* line 80, ../sass/_sections.scss */
 .section.stats {
   display: table;
   padding: 0;
+  background-color: #fff;
   border-collapse: collapse;
 }
-/* line 72, ../sass/_sections.scss */
+/* line 85, ../sass/_sections.scss */
 .section.stats .stats-section {
   display: table-cell;
   vertical-align: middle;
@@ -1282,34 +1295,32 @@ ma
   text-align: center;
   border: 1px solid #e2e2e2;
 }
-/* line 79, ../sass/_sections.scss */
+/* line 92, ../sass/_sections.scss */
 .section.stats .stats-section a {
   text-decoration: none;
   color: inherit;
 }
-/* line 83, ../sass/_sections.scss */
+/* line 96, ../sass/_sections.scss */
 .section.stats .stats-section .stat-value {
   font: 4.5rem "Montserrat", Arial, sans-serif;
 }
-/* line 86, ../sass/_sections.scss */
+/* line 99, ../sass/_sections.scss */
 .section.stats .stats-section .stat-label {
   font: 700 1rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
 }
 
-/* line 93, ../sass/_sections.scss */
+/* line 106, ../sass/_sections.scss */
 .section.posts {
   overflow: hidden;
   padding: 100px 0;
+  background-color: #fff;
 }
-/* line 96, ../sass/_sections.scss */
+/* line 110, ../sass/_sections.scss */
 .section.posts.background {
-  background-image: url(/public/img/bg-section-posts.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-color: transparent;
 }
-/* line 102, ../sass/_sections.scss */
+/* line 118, ../sass/_sections.scss */
 .section.posts.short-list .section.posts:before {
   content: "";
   display: block;
@@ -1324,74 +1335,94 @@ ma
   background-image: -o-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.65) 100%);
   background-image: linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.65) 100%);
 }
-/* line 113, ../sass/_sections.scss */
+/* line 130, ../sass/_sections.scss */
+.section.posts.list span,
+.section.posts.list h2 {
+  z-index: 1;
+  position: relative;
+  color: #000;
+}
+/* line 135, ../sass/_sections.scss */
+.section.posts.list h2 a:after {
+  background-color: #000;
+}
+/* line 140, ../sass/_sections.scss */
 .section.posts span,
 .section.posts h2 {
   z-index: 1;
   position: relative;
   color: #fff;
 }
-/* line 118, ../sass/_sections.scss */
+/* line 145, ../sass/_sections.scss */
 .section.posts h2 a:after {
   background-color: #fff;
 }
+/* line 148, ../sass/_sections.scss */
+.section.posts .button {
+  margin-top: 60px;
+}
 
-/* line 123, ../sass/_sections.scss */
+/* line 153, ../sass/_sections.scss */
+.section.project {
+  background-color: #fff;
+}
+
+/* line 157, ../sass/_sections.scss */
 .section.project + .section.project {
   padding-top: 0;
 }
 
-/* line 127, ../sass/_sections.scss */
+/* line 161, ../sass/_sections.scss */
 .section.contact {
   background-color: #ececec;
 }
 
-/* line 131, ../sass/_sections.scss */
+/* line 165, ../sass/_sections.scss */
 .section.copyright {
   padding: 20px 0 16px;
   color: #646464;
   border-top: 1px solid #242424;
   background-color: #181818;
 }
-/* line 136, ../sass/_sections.scss */
+/* line 172, ../sass/_sections.scss */
 .section.copyright p {
   float: left;
   width: 50%;
   font: 0.875rem "Montserrat", Arial, sans-serif;
   text-transform: uppercase;
 }
-/* line 142, ../sass/_sections.scss */
+/* line 178, ../sass/_sections.scss */
 .section.copyright .social {
   float: right;
   width: 50%;
   text-align: right;
 }
-/* line 146, ../sass/_sections.scss */
+/* line 182, ../sass/_sections.scss */
 .section.copyright .social a {
   color: #ccc;
 }
-/* line 149, ../sass/_sections.scss */
+/* line 185, ../sass/_sections.scss */
 .section.copyright .social .social-element a:before {
   background-color: #2e2e2e;
 }
-/* line 152, ../sass/_sections.scss */
+/* line 188, ../sass/_sections.scss */
 .section.copyright .social .social-element + .social-element {
   padding-left: 0;
   border-left: none;
 }
 
-/* line 159, ../sass/_sections.scss */
+/* line 195, ../sass/_sections.scss */
 .social {
   margin: 0;
   padding: 0;
   font-size: 0;
   list-style-type: none;
 }
-/* line 164, ../sass/_sections.scss */
+/* line 200, ../sass/_sections.scss */
 .social a {
   color: #fff;
 }
-/* line 167, ../sass/_sections.scss */
+/* line 203, ../sass/_sections.scss */
 .social .social-element {
   display: inline-block;
   padding: 0;
@@ -1399,7 +1430,7 @@ ma
   text-align: center;
   text-transform: uppercase;
 }
-/* line 173, ../sass/_sections.scss */
+/* line 209, ../sass/_sections.scss */
 .social .social-element .bg-hover:before {
   top: 50%;
   left: 50%;
@@ -1408,7 +1439,7 @@ ma
   margin-top: -25px;
   margin-left: -25px;
 }
-/* line 182, ../sass/_sections.scss */
+/* line 218, ../sass/_sections.scss */
 .social .social-element + .social-element {
   margin-left: 15px;
   padding-left: 15px;

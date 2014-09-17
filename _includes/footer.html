@@ -3,11 +3,11 @@
         <p>{{ site.copyright }}</p>
         <ul class="social clearfix">
             {% for media in site.data.social %}
-                <li class="social-element {{ media.name }}">
-                    <a href="{{ media.url }}" class="bg-hover">
-                        <i class="fa fa-{{ media.name }}"></i>
-                    </a>
-                </li>
+            <li class="social-element {{ media.name }}">
+                <a href="{{ media.url }}" class="bg-hover">
+                    <i class="fa fa-{{ media.name }}"></i>
+                </a>
+            </li>
             {% endfor %}
         </ul>
     </div>

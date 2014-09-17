@@ -4,23 +4,26 @@
 
 body {
     font-family: "Source Sans Pro", Arial, sans-serif;
+    background-image: url(/public/img/bg-section-home.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .logo {
     position: relative;
-    width: 150px;
+    max-width: 90%;
     margin: 0 auto 90px;
     img {
         z-index: 1;
         position: relative;
-        @include border-radius(50%);
     }
 }
 
 h1 {
     display: inline-block;
     margin: 0;
-    padding: 0 .15em;
+    padding: 0 0.15em;
     font: rem(54px) "Montserrat", Arial, sans-serif;
     text-transform: uppercase;
     color: #fff;
@@ -34,7 +37,7 @@ h1 {
 .tagline {
     display: inline-block;
     margin-top: 0;
-    padding: 0 .15em;
+    padding: 0 0.15em;
     font: rem(32px) "Montserrat", Arial, sans-serif;
     text-transform: uppercase;
     color: #fff;
@@ -106,7 +109,7 @@ a {
             @include scale(0);
             @include transition-property(all);
             @include transition-duration(200ms);
-            @include transition-timing-function(cubic-bezier(.25,.25,.325,1.39));
+            @include transition-timing-function(cubic-bezier(0.25,0.25,0.325,1.39));
         }
         &:hover {
             color: #fff;
@@ -118,6 +121,7 @@ a {
 }
 
 p {
+    font-size: 1.25rem;
     font-weight: 300;
     color: #696969;
     &.heading {

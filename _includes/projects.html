@@ -1,7 +1,7 @@
 {% for project in site.data.projects %}
-    <div class="section project project-{{ project.id }}">
-        <div class="section-content">
-            <h2>
+<div class="section project project-{{ project.id }}">
+    <div class="section-content">
+        <h2>
             <a href="{{ project.url }}">
                 {{ project.name }}
                 {% if project.icon And project.icon != "" And project.icon != nil %}
@@ -10,10 +10,10 @@
                     {% endfor %}
                 {% endif %}
             </a>
-            </h2>
-            {% if project.description And project.description != "" And project.description != nil %}
-                <p>{{ project.description }}</p>
-            {% endif %}
-        </div>
+        </h2>
+        {% if project.description And project.description != "" And project.description != nil %}
+        <p>{{ project.description }}</p>
+        {% endif %}
     </div>
+</div>
 {% endfor %}

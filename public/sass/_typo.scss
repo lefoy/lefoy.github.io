@@ -2,7 +2,7 @@
 =            Typography            =
 ==================================*/
 
-.post-content {
+.section.posts .post-content {
     h1,
     h2,
     h3,
@@ -23,24 +23,28 @@
         }
     }
     h1 {
-        margin: .67em 0 .4em;
+        margin: 0.67em 0 0.4em;
         font-size: rem(48px);
     }
     h2 {
-        margin: .75em 0 .7em;
+        margin: 0.75em 0 0.7em;
         font-size: rem(36px);
+        color: #000;
     }
     h3 {
-        margin: .83em 0 .78em;
+        margin: 0.83em 0 0.78em;
         font-size: rem(28px);
+        color: #000;
     }
     h4 {
         margin: 1.12em 0 1.07em;
         font-size: rem(21px);
+        color: #000;
     }
     h5 {
         margin: 1.5em 0 1.45em;
         font-size: rem(18px);
+        color: #000;
     }
     p,
     li {
