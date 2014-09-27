@@ -26,14 +26,16 @@ $(document).ready(function() {
         $('.odometer.repositories').attr('data-number', lefoyRepositories.repositories.length);
     });
 
-    function twitterCallback(data) {
-        $('.odometer.tweets').attr('data-number', data.results.collection1[1].property1.text);
-        $('.odometer.followers').attr('data-number', data.results.collection1[7].property1.text);
-    }
-
-    $.ajax({
-        "url": "https://www.kimonolabs.com/api/ajv8viwq?apikey=S8UcvAYXCnHxQ0tq7Qwr6xxUZC1PPfLQ&callback=twitterCallback",
-        "crossDomain": true,
-        "dataType": "jsonp"
+    window.setTimeout(function() {
+        $.ajax({
+            "url": "https://www.kimonolabs.com/api/ajv8viwq?apikey=S8UcvAYXCnHxQ0tq7Qwr6xxUZC1PPfLQ&callback=twitterCallback",
+            "crossDomain": true,
+            "dataType": "jsonp"
+        });
     });
 });
+
+function twitterCallback(data) {
+    $('.odometer.tweets').attr('data-number', data.results.collection1[1].property1.text);
+    $('.odometer.followers').attr('data-number', data.results.collection1[7].property1.text);
+}
