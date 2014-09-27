@@ -32,8 +32,18 @@ $(document).ready(function() {
             "crossDomain": true,
             "dataType": "jsonp"
         });
-    });
+
+        $.ajax({
+            "url": "https://www.kimonolabs.com/api/45823fki?apikey=S8UcvAYXCnHxQ0tq7Qwr6xxUZC1PPfLQ&callback=stackoverflowCallback",
+            "crossDomain": true,
+            "dataType": "jsonp"
+        });
+    }, 1);
 });
+
+function stackoverflowCallback(data) {
+    $('.odometer.reputation').attr('data-number', data.results.collection1[1].reputation.text);
+}
 
 function twitterCallback(data) {
     $('.odometer.tweets').attr('data-number', data.results.collection1[1].property1.text);

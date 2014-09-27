@@ -9,3 +9,7 @@
 - label: followers
   value: 0
   url: https://twitter.com/louisetiennefoy
+
+- label: reputation
+  value: 0
+  url: http://stackoverflow.com/users/2141535/lefoy
