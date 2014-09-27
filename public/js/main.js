@@ -27,8 +27,8 @@ $(document).ready(function() {
     });
 
     function twitterCallback(data) {
-        $('.odometer.tweets').attr('data-number', data.results[1].text);
-        $('.odometer.followers').attr('data-number', data.results[7].text);
+        $('.odometer.tweets').attr('data-number', data.results.collection1[1].text);
+        $('.odometer.followers').attr('data-number', data.results.collection1[7].text);
     }
 
     $.ajax({
