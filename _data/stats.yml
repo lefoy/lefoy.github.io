@@ -2,6 +2,10 @@
   value: 0
   url: https://github.com/lefoy?tab=repositories
 
+- label: tweets
+  value: 0
+  url: https://twitter.com/louisetiennefoy
+
 - label: followers
   value: 0
   url: https://twitter.com/louisetiennefoy

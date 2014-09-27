@@ -26,21 +26,14 @@ $(document).ready(function() {
         $('.odometer.repositories').attr('data-number', lefoyRepositories.repositories.length);
     });
 
-    $.ajax({
-        type: "GET",
-        dataType: "jsonp",
-        url: "http://api.twittercounter.com/?twitter_id=556853137&apikey=b3abfbe5c76aec3fc59c426b0d51eeb0&output=JSONP&callback=getcount",
-        success: function(data) {
-            $('.odometer.followers').attr('data-number', data.followers_current);
-        }
-    });
+    function twitterCallback(data) {
+        $('.odometer.tweets').attr('data-number', data.results[1].text);
+        $('.odometer.followers').attr('data-number', data.results[7].text);
+    }
 
     $.ajax({
-        type: "GET",
-        dataType: "html",
-        url: "http://0.0.0.0:4000/?url=github.com/lefoy",
-        success: function(data) {
-
-        }
+        "url": "https://www.kimonolabs.com/api/ajv8viwq?apikey=S8UcvAYXCnHxQ0tq7Qwr6xxUZC1PPfLQ&callback=twitterCallback",
+        "crossDomain": true,
+        "dataType": "jsonp"
     });
 });
