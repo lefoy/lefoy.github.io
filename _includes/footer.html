@@ -1,14 +1,14 @@
-<div class="section copyright">
-    <div class="section-content clearfix">
-        <p>{{ site.copyright }}</p>
-        <ul class="social clearfix">
-            {% for media in site.data.social %}
-            <li class="social-element {{ media.name }}">
-                <a href="{{ media.url }}" class="bg-hover">
-                    <i class="fa fa-{{ media.name }}"></i>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+<div class="copyright">
+    <div class="l-page-wrapper">
+        <div class="left">
+            <p>
+                Project created by <a href="{{site.github}}">lefoy</a>
+            </p>
+        </div>
+        <div class="right">
+            <p>
+                <a href="{{site.repo}}/blob/master/LICENSE">License</a>
+            </p>
+        </div>
     </div>
 </div>

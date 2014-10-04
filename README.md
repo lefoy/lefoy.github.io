@@ -1,4 +1,4 @@
 lefoy.github.io
 ===============
 
-My personal website (work in progress)
+This is my personal website.

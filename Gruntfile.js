@@ -1,34 +1,37 @@
 module.exports = function(grunt) {
 
+    var pkg = grunt.file.readJSON('package.json'),
+        currentVersion = pkg.version;
+
     // Project configuration.
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        // --------------------------------------------------
+        pkg: pkg,
 
-        compass: {
-            dest: {
-                options: {
-                    sassDir: 'public/sass',
-                    cssDir: 'public/css',
-                    imagesDir: 'public/img',
-                    environment: 'development',
-                    require: 'sass-globbing'
-                }
+        bump: {
+            options: {
+                files: ['package.json'],
+                updateConfigs: ['pkg'],
+                commit: true,
+                commitMessage: 'Release v%VERSION%',
+                commitFiles: ['package.json'],
+                createTag: true,
+                tagName: 'v%VERSION%',
+                tagMessage: 'Version %VERSION%',
+                push: true,
+                pushTo: 'origin',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+                globalReplace: false
             }
         },
-
-        // --------------------------------------------------
 
         exec: {
             build: {
-                cmd: 'jekyll build'
+                cmd: 'jekyll build --safe'
             },
             serve: {
-                cmd: 'jekyll serve'
+                cmd: 'jekyll serve --safe'
             }
         },
-
-        // --------------------------------------------------
 
         concurrent: {
             jekyll: {
@@ -39,20 +42,18 @@ module.exports = function(grunt) {
             }
         },
 
-        // --------------------------------------------------
-
         watch: {
             jekyll: {
-                files: ['**/*.{html, md, yml, js}'],
+                files: [
+                    '*.{html, md, yml, js}',
+                    '_includes/**/*.{html, md, yml, js, scss}',
+                    '_layouts/**/*.{html, md, yml, js, scss}',
+                    '_posts/**/*.{html, md, yml, js, scss}',
+                    '_scss/**/*.{html, md, yml, js, scss}'
+                ],
                 tasks: ['exec:build']
-            },
-            compass: {
-                files: ['public/sass/**/*.scss'],
-                tasks: ['compass', 'exec:build']
             }
         }
-
-        // --------------------------------------------------
     });
 
     // Load all npm tasks at once

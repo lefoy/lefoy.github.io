@@ -2,17 +2,9 @@
 <html lang="en">
 
 <head>
-    <!--
-      _       __
-     | |     / _|
-     | | ___| |_ ___  _   _
-     | |/ _ \  _/ _ \| | | |
-     | |  __/ || (_) | |_| |
-     |_|\___|_| \___/ \__, |
-                       __/ |
-                      |___/
-     -->
-    <title>{{ site.title }}</title>
+    <title>
+        {% if page.title == "Home" %} {{ site.title }} {% else %} {{ page.title }} {% endif %}
+    </title>
 
     <meta charset="UTF-8">
     <meta name="author" content="{{ site.author }}">
@@ -20,45 +12,28 @@
     <meta name="keywords" content="{{ site.keywords }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="google-site-verification" content="d_Z5RGznivLRAQqNfVlULjiP3XsUp6HK8ytuodLNN3A" />
-
-    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{site.url}}/public/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{site.url}}/public/favicon.ico" type="image/x-icon">
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Montserrat:400,700|Source+Code+Pro:300,400,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/public/css/odometer.css">
-    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="{{site.url}}/css/main.css">
 </head>
 
 <body>
 
     {{ content }}
 
-    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/public/js/vendor/underscore-min.js"></script>
-    <script type="text/javascript" src="/public/js/vendor/jquery.inview.min.js"></script>
-    <script type="text/javascript" src="/public/js/vendor/codebird.js"></script>
-    <script type="text/javascript" src="/public/js/vendor/odometer.min.js"></script>
-    <script type="text/javascript" src="/public/js/vendor/gh3.js"></script>
-    <script type="text/javascript" src="/public/js/main.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/modernizr.min.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/detectizr.min.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/jquery.stickOnScroll.min.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/prism.min.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/moment.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/gh3.js"></script>
 
-    <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    <script type="text/javascript" src="{{site.url}}/public/js/components/layout.js"></script>
 
-    ga('create', 'UA-39044571-2', 'auto');
-    ga('send', 'pageview');
-    </script>
+    <script type="text/javascript" src="{{site.url}}/public/js/main.js"></script>
 
 </body>
 

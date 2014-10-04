@@ -1,35 +1,21 @@
 # Setup
 title           : lefoy
 description     : "I'm a front-end Web developer from Quebec City, Canada."
-keywords        : "lefoy lefoy.net louisetiennefoy louisetienne foy web front-end frontend integrateur developer developpeur"
+keywords        : "front-end front end web developer integrateur developpeur quebec"
 url             : http://lefoy.net
 
 author          : lefoy
 name            : "lefoy"
-url             : https://github.com/lefoy
+website         : http://lefoy.net/
 
-tagline         : "front-end web developer"
-copyright       : "© 2014 lefoy - All rights reserved"
-
-# Custom vars
 version         : 1.0.0
 markdown        : redcarpet
 highlighter     : pygments
 
-github          :
+github          : https://github.com/lefoy
 repo            : https://github.com/lefoy/lefoy.github.io
 
-# Defaults
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "post"
-    values:
-      layout: "post"
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
-    values:
-      layout: "post"
+# Assets
+sass:
+  sass_dir: _scss
+  style: :compressed
