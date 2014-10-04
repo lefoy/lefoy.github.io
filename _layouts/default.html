@@ -21,7 +21,16 @@
 
 <body>
 
-    {{ content }}
+    {% include header.html %}
+
+    <div class="project-content">
+        <div class="project-content-wrapper l-page-wrapper">
+            {% if page.title != "Home" %} <p><a href="{{site.url}}"><i class="fa fa-long-arrow-left"></i> Back to home</a></p> {% endif %}
+            {{ content }}
+        </div>
+    </div>
+
+    {% include footer.html %}
 
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/modernizr.min.js"></script>

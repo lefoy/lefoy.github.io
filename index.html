@@ -3,16 +3,10 @@ layout: default
 title: Home
 ---
 
-{% include header.html %}
-
-<div class="project-content">
-    <div class="project-content-wrapper l-page-wrapper">
-        <div class="project-content-left"></div>
-        <div class="project-content-right">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius minima magnam corporis voluptatem minus id dolorum, voluptatum tenetur architecto dignissimos nostrum ex consequuntur, neque ea ipsum commodi deserunt asperiores vel sunt. Ipsam vel impedit, voluptate debitis reprehenderit alias ullam laudantium voluptas illum asperiores consequatur dolorum quaerat, quas perferendis qui aspernatur velit ex blanditiis rem cupiditate eveniet est possimus error iusto neque. Fuga, eius fugit perspiciatis similique necessitatibus! Nostrum eos veritatis qui, velit tempore perspiciatis consequuntur asperiores nam sint nesciunt doloremque iste unde quasi, eum quas est ab! Quos, fuga, reiciendis id cumque quam veritatis, quisquam delectus officiis ex error dolore.</p>
-        </div>
-    </div>
-</div>
-
-
-{% include footer.html %}
+<ul class="blog-list">
+    {% for post in site.posts %}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Lorem ipsum dolor sit amet
 published: true
 ---
