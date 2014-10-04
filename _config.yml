@@ -13,6 +13,8 @@ markdown        : redcarpet
 highlighter     : pygments
 
 github          : https://github.com/lefoy
+twitter         : https://twitter.com/louisetiennefoy
+stackoverflow   : http://stackoverflow.com/users/2141535/lefoy?tab=summary
 repo            : https://github.com/lefoy/lefoy.github.io
 
 # Assets
