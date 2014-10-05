@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Google Fonts Online Preview
+permalink: google-fonts-online-preview
 published: true
 ---
 

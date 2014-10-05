@@ -1,6 +1,7 @@
 ---
 layout: default
 title: First Jekyll Post
+permalink: first-jekyll-post
 published: true
 ---
 

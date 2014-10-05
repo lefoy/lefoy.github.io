@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Cyanide Theme for Sublime Text
+permalink: cyanide-theme-for-sublime-text
 published: true
 ---
 
