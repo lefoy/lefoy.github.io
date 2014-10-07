@@ -14,6 +14,9 @@ published: true
 ## [AutoPEP8](https://sublime.wbond.net/packages/AutoPEP8)
 > Automatically formats Python code to conform to the PEP 8 style guide using autopep8 and pep8 modules
 
+## [BracketHighlighter](https://sublime.wbond.net/packages/BracketHighlighter)
+> Bracket and tag highlighter for Sublime Text
+
 ## [BufferScroll](https://sublime.wbond.net/packages/BufferScroll)
 > Remember, restore and sync scroll, bookmarks, marks, folds and cursors. keys: multiple columns one buffer, follow mode, split, screen, pages, synchronize vertical and typewriter scrolling
 
@@ -79,6 +82,9 @@ published: true
 
 ## [SublimeLinter](https://sublime.wbond.net/packages/SublimeLinter)
 > Interactive code linting framework for Sublime Text 3
+
+## [TabsExtra](https://sublime.wbond.net/packages/TabsExtra)
+> Sublime Plugin with sticky tabs, more tab closing options, and additional menu items.
 
 ## [WakaTime](https://sublime.wbond.net/packages/WakaTime)
 > Automatic time tracking for Sublime Text 2 & 3
