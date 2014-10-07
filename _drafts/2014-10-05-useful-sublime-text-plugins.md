@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Useful Sublime Text Plugins
+title: Useful Sublime Text plugins
 permalink: useful-sublime-text-plugins
 published: true
 ---

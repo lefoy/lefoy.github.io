@@ -39,3 +39,13 @@ hr {
     margin: 2em 0;
     border-color: rgba(0,39,59,0.08);
 }
+
+blockquote {
+    margin-left: 0;
+    padding-left: 20px;
+    font-style: italic;
+    border-left: 4px solid #ccc;
+    p {
+        color: #757575;
+    }
+}
