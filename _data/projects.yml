@@ -1,4 +1,14 @@
+- name: Cyanide Theme
+  description: A minimal dark theme for Sublime Text.
+  url: http://lefoy.net/cyanide-theme/
+  image: http://i.imgur.com/uuqsbvz.jpg
+
 - name: Google Fonts Online Preview
   description: Preview Google Fonts in a web environnement.
   url: http://lefoy.net/google-fonts/
   image: http://i.imgur.com/VSUBYVE.jpg
+
+- name: Grid
+  description: Just another simple sass grid system.
+  url: http://lefoy.net/grid/
+  image: http://i.imgur.com/KpwLMQl.jpg
