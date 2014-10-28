@@ -3,4 +3,15 @@ layout: default
 title: Projects
 ---
 
-<p>Projects</p>
+<ul class="project-list">
+    {% for project in site.data.projects %}
+    <li class="clearfix">
+        <div class="float-left">
+            <img src="{{ project.image }}" alt="{{ project.name }}">
+        </div>
+        <div class="float-right">
+            <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
