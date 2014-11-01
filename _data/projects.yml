@@ -12,3 +12,8 @@
   description: Just another simple sass grid system.
   url: http://lefoy.net/grid/
   image: http://i.imgur.com/KpwLMQl.jpg
+
+- name: Experiments
+  description: CSS and JavaScript experiments.
+  url: http://lefoy.net/experiments/
+  image: http://i.imgur.com/BNrDYTK.jpg
