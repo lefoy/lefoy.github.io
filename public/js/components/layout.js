@@ -2,12 +2,20 @@ var layout = (function(window, document, $) {
 
     'use strict';
 
-    var init = function() {
+    var $window = $(window),
+        windowWidth = $window.width(),
+        windowHeight = $window.height(),
+
+        init = function() {
 
             stickOnScroll();
             navigation();
 
-            var height = $(window).height() - $('.project-header').outerHeight() - $('.copyright').outerHeight();
+            if (windowWidth > 767) {
+                codeHoverEffect();
+            }
+
+            var height = windowHeight - $('.project-header').outerHeight() - $('.copyright').outerHeight();
             $('.project-content').css('min-height', height);
 
         },
@@ -20,6 +28,46 @@ var layout = (function(window, document, $) {
                     topOffset: 10
                 });
             }, 100);
+
+        },
+
+        codeHoverEffect = function() {
+
+            var elements = $('pre'),
+                wrapperWidth = $('.l-page-wrapper').width();
+
+            elements.each(function(index, el) {
+                var $el = $(el),
+                    width = $el.find('code').width();
+
+                if (width > wrapperWidth) {
+                    var maxWidth = $window.width() * 0.8;
+
+                    $el.css({
+                        width: wrapperWidth,
+                        maxWidth: maxWidth
+                    });
+
+                    $(el).hover(function() {
+                        var marginLeft = (wrapperWidth - width) / 2;
+
+                        if (width > maxWidth) {
+                            width = maxWidth;
+                            marginLeft = (maxWidth - wrapperWidth) / 2 * -1
+                        }
+
+                        $el.css({
+                            width: width,
+                            marginLeft: marginLeft
+                        });
+                    }, function() {
+                        $el.css({
+                            width: wrapperWidth,
+                            marginLeft: 0
+                        });
+                    });
+                }
+            });
 
         },
 
