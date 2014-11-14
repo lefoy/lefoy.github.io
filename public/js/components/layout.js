@@ -80,7 +80,7 @@ var layout = (function(window, document, $) {
                     opacity: 0.5,
                     size: 2,
                     size_random: true,
-                    nb: 200,
+                    nb: 100,
                     line_linked: {
                         enable_auto: true,
                         distance: 250,
@@ -99,7 +99,7 @@ var layout = (function(window, document, $) {
                     }
                 },
                 interactivity: {
-                    enable: false,
+                    enable: true,
                     mouse: {
                         distance: 250
                     },
