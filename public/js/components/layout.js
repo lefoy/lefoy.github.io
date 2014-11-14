@@ -73,6 +73,12 @@ var layout = (function(window, document, $) {
         },
 
         particles = function() {
+            var nbParticles = 120;
+
+            if (windowWidth < 768) {
+                nbParticles = 50;
+            }
+
             particlesJS('particles', {
                 canvas: {
                     color_hex_bg: '#000',
@@ -83,7 +89,7 @@ var layout = (function(window, document, $) {
                     opacity: 1,
                     size: 2.5,
                     size_random: true,
-                    nb: 120,
+                    nb: nbParticles,
                     anim: {
                         speed: 2
                     }
