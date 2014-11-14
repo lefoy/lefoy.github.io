@@ -39,6 +39,8 @@
 }
 
 .project-header {
+    height: auto;
+    padding-top: 0;
     //background-image: url(http://lefoy.net/public/img/background.jpg);
     //background-attachment: fixed;
     //background-position: center;
@@ -46,6 +48,8 @@
     background-color: #000;
     .project-header-wrapper {
         position: relative;
+        height: 100%;
+        padding: 175px 0 95px;
     }
     canvas {
         //z-index: -1;
