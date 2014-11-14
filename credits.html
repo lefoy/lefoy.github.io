@@ -1,0 +1,20 @@
+---
+layout: default
+title: Projects
+---
+
+<ul class="credit-list">
+    {% for credit in site.data.credits %}
+    <li class="clearfix">
+        <!-- <div class="float-left">
+            <a href="{{ credit.url }}">
+                <img src="{{ credit.image }}" alt="{{ credit.name }}">
+            </a>
+        </div> -->
+        <div class="float-right">
+            <h2><a href="{{ credit.url }}">{{ credit.name }}</a></h2>
+            <p>{{ credit.description }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
