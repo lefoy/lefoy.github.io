@@ -76,7 +76,7 @@ var layout = (function(window, document, $) {
             var nbParticles = 120;
 
             if (windowWidth < 768) {
-                nbParticles = 50;
+                nbParticles = 35;
             }
 
             particlesJS('particles', {
