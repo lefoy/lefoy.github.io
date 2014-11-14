@@ -83,7 +83,7 @@ var layout = (function(window, document, $) {
                     opacity: 1,
                     size: 2.5,
                     size_random: true,
-                    nb: 140,
+                    nb: 120,
                     anim: {
                         speed: 2
                     }
