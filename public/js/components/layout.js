@@ -10,6 +10,7 @@ var layout = (function(window, document, $) {
 
             stickOnScroll();
             navigation();
+            particles();
 
             if (windowWidth > 767) {
                 codeHoverEffect();

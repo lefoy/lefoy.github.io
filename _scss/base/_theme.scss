@@ -43,6 +43,10 @@
     //background-attachment: fixed;
     //background-position: center;
     //background-size: cover;
+    background-color: #000;
+    .project-header-wrapper {
+        position: relative;
+    }
     canvas {
         z-index: -1;
         position: absolute;
