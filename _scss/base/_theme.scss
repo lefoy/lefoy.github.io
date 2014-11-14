@@ -39,10 +39,18 @@
 }
 
 .project-header {
-    background-image: url(http://lefoy.net/public/img/background.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    //background-image: url(http://lefoy.net/public/img/background.jpg);
+    //background-attachment: fixed;
+    //background-position: center;
+    //background-size: cover;
+    canvas {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .project-buttons {
