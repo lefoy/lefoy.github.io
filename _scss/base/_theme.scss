@@ -50,6 +50,7 @@
         position: relative;
         height: 100%;
         padding: 175px 0 95px;
+        text-align: center;
     }
     canvas {
         //z-index: -1;
@@ -62,6 +63,7 @@
 }
 
 .project-buttons {
+    display: inline-block;
     z-index: 1;
     position: relative;
     margin-top: 60px;
