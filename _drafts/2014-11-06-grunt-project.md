@@ -133,7 +133,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: '<%= app.src %>/<%= app.css %>/',
                 src: ['*.css', '!*.min.css'],
-                dest: '<%= app.dest %>/<%= app.css %>/',
+                dest: '<%= app.src %>/<%= app.css %>/',
                 ext: '.min.css'
             }
         },
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= app.src %>/<%= app.js %>',
                     src: ['**/*.js', '!**/*.min.js'],
-                    dest: '<%= app.dest %>/<%= app.js %>',
+                    dest: '<%= app.src %>/<%= app.js %>',
                     ext: '.min.js'
                 }]
             }
@@ -209,7 +209,13 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     // Default task
-    grunt.registerTask('default', 'Default grunt task', function() { grunt.task.run([]); }); grunt.registerTask('default', 'Default grunt task', function() { grunt.task.run([]); });
+    grunt.registerTask('default', 'Default grunt task', function() {
+        grunt.task.run([]);
+    });
+
+    grunt.registerTask('default', 'Default grunt task', function() {
+        grunt.task.run([]);
+    });
 
     // Load grunt config
     grunt.initConfig(config);
