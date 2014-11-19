@@ -10,7 +10,8 @@ var layout = (function(window, document, $) {
 
             stickOnScroll();
             navigation();
-            particles();
+            //particles();
+            snow();
 
             if (windowWidth > 767) {
                 codeHoverEffect();
@@ -96,6 +97,20 @@ var layout = (function(window, document, $) {
                 },
                 retina_detect: true
             });
+        },
+
+        snow = function() {
+
+            $('#show').snowfall({
+                flakeCount: 60,
+                minSize: 1,
+                maxSize: 5,
+                minSpeed: 0.5,
+                maxSpeed: 3,
+                round: true,
+                deviceorientation: true
+            });
+
         },
 
         navigation = function() {
