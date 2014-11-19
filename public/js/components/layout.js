@@ -95,6 +95,15 @@ var layout = (function(window, document, $) {
                         speed: 2
                     }
                 },
+                interactivity: {
+                    events: {
+                        onclick: {
+                            enable: true,
+                            mode: 'push',
+                            nb: 1
+                        }
+                    }
+                },
                 retina_detect: true
             });
         },
