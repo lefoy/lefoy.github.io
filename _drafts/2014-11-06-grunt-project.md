@@ -5,6 +5,8 @@ permalink: grunt-project
 published: true
 ---
 
+## Goals
+
 - Sass with Compass framework
 - File minification
 - File concatenation
