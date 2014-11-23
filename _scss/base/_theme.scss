@@ -131,3 +131,20 @@ pre {
     @include transition-property(all);
     @include transition-duration(300ms);
 }
+
+.date {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #ccc;
+    &:before {
+        content: "-";
+        margin: 0 6px;
+    }
+}
+
+.blog-list li {
+    & > a,
+    .date {
+        display: inline-block;
+    }
+}
