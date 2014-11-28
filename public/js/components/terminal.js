@@ -3,6 +3,7 @@ var terminal = (function(window, document, $) {
     'use strict';
 
     var $window = $(window),
+        $body = $('body'),
         terminal,
 
         init = function() {
@@ -40,13 +41,15 @@ var terminal = (function(window, document, $) {
                 backgroundColor: '#000'
             });
 
+            $body.css('overflow', 'hidden');
+
         },
 
         terminalInit = function() {
 
-            $('body').append('<div id="terminal"></div>');
+            $body.append('<div id="terminal"></div>');
 
-            terminal = $('body').find('#terminal');
+            terminal = $body.find('#terminal');
 
             $('#terminal').terminal(function(command, term) {
                 switch (command) {
@@ -77,6 +80,7 @@ var terminal = (function(window, document, $) {
                         break;
                     case 'exit':
                         $('#terminal').remove();
+                        $body.css('overflow', 'auto');
                         break;
                     default:
                         term.echo('command not found: ' + command + '\n');
