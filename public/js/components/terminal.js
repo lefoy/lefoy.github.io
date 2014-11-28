@@ -37,7 +37,7 @@ var terminal = (function(window, document, $) {
                 height: '100%',
                 color: '#fff',
                 zIndex: '1000000',
-                backgroundColor: 'rgba(0, 0, 0, 0.9)'
+                backgroundColor: '#000'
             });
 
         },
