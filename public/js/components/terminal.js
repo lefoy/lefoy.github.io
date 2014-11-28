@@ -71,7 +71,9 @@ var terminal = (function(window, document, $) {
                     case 'rm -fr /':
                     case 'rm -r /':
                     case 'rm -f /':
+                        term.echo('\n');
                         cmd_meme('rm-rf.jpg');
+                        term.echo('\n');
                         break;
                     case 'exit':
                         $('#terminal').remove();
@@ -96,9 +98,7 @@ var terminal = (function(window, document, $) {
         },
 
         cmd_meme = function(filename) {
-            term.echo('\n');
             $('.terminal-output').append('<img src="/public/img/terminal/' + filename + '" alt="" />');
-            term.echo('\n');
         };
 
     return {
