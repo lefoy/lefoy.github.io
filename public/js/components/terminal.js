@@ -51,7 +51,6 @@ var terminal = (function(window, document, $) {
             $('#terminal').terminal(function(command, term) {
                 switch (command) {
                     case '':
-                        term.echo('\n');
                         break;
                     case 'help':
                         term.echo(['',
