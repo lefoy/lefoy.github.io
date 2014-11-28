@@ -69,6 +69,8 @@ var terminal = (function(window, document, $) {
                         break;
                     case 'rm -rf /':
                     case 'rm -fr /':
+                    case 'rm -r /':
+                    case 'rm -f /':
                         cmd_meme('rm-rf.jpg');
                         break;
                     case 'exit':
