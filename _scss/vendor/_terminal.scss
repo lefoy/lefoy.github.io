@@ -1,0 +1,155 @@
+/*
+ * This css file is part of jquery terminal
+ *
+ * Licensed under GNU LGPL Version 3 license
+ * Copyright (c) 2011-2013 Jakub Jankiewicz <http://jcubic.pl>
+ *
+ */
+.terminal .terminal-output .format,
+.cmd .format,
+.cmd .prompt,
+.cmd .prompt div,
+.terminal .terminal-output div div {
+    display: inline-block;
+}
+.cmd .clipboard {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    opacity: 0.01;
+    filter: alpha(opacity = 0.01);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.01);
+}
+.cmd > .clipboard {
+    position: fixed;
+}
+.terminal {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+.cmd {
+    height: 1.3em;
+    margin: 0;
+    padding: 0;
+    /*margin-top: 3px; */
+}
+.cmd .cursor.blink {
+    -webkit-animation: blink 1s infinite steps(1, start);
+    -moz-animation: blink 1s infinite steps(1, start);
+    -ms-animation: blink 1s infinite steps(1, start);
+    animation: blink 1s infinite steps(1, start);
+}
+@keyframes blink {
+    0%,
+    100% {
+        color: #aaa;
+        background-color: #000;
+    }
+    50% {
+        color: #000;
+        background-color: #bbb; /* not #aaa because it's seem there is Google Chrome bug */
+    }
+}
+@-webkit-keyframes blink {
+    0%,
+    100% {
+        color: #aaa;
+        background-color: #000;
+    }
+    50% {
+        color: #000;
+        background-color: #bbb;
+    }
+}
+@-ms-keyframes blink {
+    0%,
+    100% {
+        color: #aaa;
+        background-color: #000;
+    }
+    50% {
+        color: #000;
+        background-color: #bbb;
+    }
+}
+@-moz-keyframes blink {
+    0%,
+    100% {
+        color: #aaa;
+        background-color: #000;
+    }
+    50% {
+        color: #000;
+        background-color: #bbb;
+    }
+}
+.terminal .terminal-output div div,
+.cmd .prompt {
+    display: block;
+    height: auto;
+    line-height: 14px;
+}
+.cmd .prompt {
+    float: left;
+}
+.terminal,
+.cmd {
+    font-family: FreeMono, monospace;
+    font-size: 12px;
+    line-height: 14px;
+    color: #aaa;
+    background-color: #000;
+}
+.terminal-output > div {
+    /*padding-top: 3px;*/
+    min-height: 14px;
+}
+.terminal .terminal-output div span {
+    display: inline-block;
+}
+.cmd span {
+    float: left;
+    /*display: inline-block; */
+}
+.terminal .inverted,
+.cmd .inverted,
+.cmd .cursor.blink {
+    color: #000;
+    background-color: #aaa;
+}
+.terminal .terminal-output div div::-moz-selection,
+.terminal .terminal-output div span::-moz-selection,
+.terminal .terminal-output div div a::-moz-selection {
+    color: #000;
+    background-color: #aaa;
+}
+.terminal .terminal-output div div::selection,
+.terminal .terminal-output div div a::selection,
+.terminal .terminal-output div span::selection,
+.cmd > span::selection,
+.cmd .prompt span::selection {
+    color: #000;
+    background-color: #aaa;
+}
+.terminal .terminal-output div.error,
+.terminal .terminal-output div.error div {
+    color: red;
+}
+.tilda {
+    z-index: 1100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.clear {
+    clear: both;
+}
+.terminal a {
+    color: #0f60ff;
+}
+.terminal a:hover {
+    color: red;
+}
