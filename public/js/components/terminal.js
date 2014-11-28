@@ -62,16 +62,14 @@ var terminal = (function(window, document, $) {
                         ].join('\n'));
                         break;
                     case 'github':
-                        window.location.href = 'https://github.com/lefoy/lefoy.github.io';
+                        cmd_redirect('https://github.com/lefoy/lefoy.github.io');
                         break;
                     case 'contact':
-                        window.location.href = "mailto:me@lefoy.net";
+                        cmd_redirect('mailto:me@lefoy.net');
                         break;
                     case 'rm -rf /':
                     case 'rm -fr /':
-                        term.echo('\n');
-                        $('.terminal-output').append('<img src="/public/img/terminal/rm-rf.jpg" alt="" />');
-                        term.echo('\n');
+                        cmd_meme('rm-rf.jpg');
                         break;
                     case 'exit':
                         $('#terminal').remove();
@@ -89,6 +87,16 @@ var terminal = (function(window, document, $) {
 
             layout();
 
+        },
+
+        cmd_redirect = function(url) {
+            window.location.href = url;
+        },
+
+        cmd_meme = function(filename) {
+            term.echo('\n');
+            $('.terminal-output').append('<img src="/public/img/terminal/' + filename + '" alt="" />');
+            term.echo('\n');
         };
 
     return {
