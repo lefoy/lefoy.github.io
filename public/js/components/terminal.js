@@ -39,6 +39,7 @@ var terminal = (function(window, document, $) {
                 zIndex: '1000000',
                 backgroundColor: 'rgba(0, 0, 0, 0.9)'
             });
+
         },
 
         terminalInit = function() {
@@ -49,6 +50,9 @@ var terminal = (function(window, document, $) {
 
             $('#terminal').terminal(function(command, term) {
                 switch (command) {
+                    case '':
+                        term.echo('\n');
+                        break;
                     case 'help':
                         term.echo(['',
                             '    list of available commands:',
