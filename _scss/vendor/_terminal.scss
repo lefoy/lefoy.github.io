@@ -44,8 +44,8 @@
 @keyframes blink {
     0%,
     100% {
-        color: #aaa;
-        background-color: #000;
+        color: #fff;
+        background-color: transparent;
     }
     50% {
         color: #000;
@@ -55,8 +55,8 @@
 @-webkit-keyframes blink {
     0%,
     100% {
-        color: #aaa;
-        background-color: #000;
+        color: #fff;
+        background-color: transparent;
     }
     50% {
         color: #000;
@@ -66,8 +66,8 @@
 @-ms-keyframes blink {
     0%,
     100% {
-        color: #aaa;
-        background-color: #000;
+        color: #fff;
+        background-color: transparent;
     }
     50% {
         color: #000;
@@ -77,8 +77,8 @@
 @-moz-keyframes blink {
     0%,
     100% {
-        color: #aaa;
-        background-color: #000;
+        color: #fff;
+        background-color: transparent;
     }
     50% {
         color: #000;
@@ -99,8 +99,6 @@
     font-family: FreeMono, monospace;
     font-size: 12px;
     line-height: 14px;
-    color: #aaa;
-    background-color: #000;
 }
 .terminal-output > div {
     /*padding-top: 3px;*/
@@ -117,13 +115,13 @@
 .cmd .inverted,
 .cmd .cursor.blink {
     color: #000;
-    background-color: #aaa;
+    background-color: #fff;
 }
 .terminal .terminal-output div div::-moz-selection,
 .terminal .terminal-output div span::-moz-selection,
 .terminal .terminal-output div div a::-moz-selection {
     color: #000;
-    background-color: #aaa;
+    background-color: #fff;
 }
 .terminal .terminal-output div div::selection,
 .terminal .terminal-output div div a::selection,
@@ -131,7 +129,7 @@
 .cmd > span::selection,
 .cmd .prompt span::selection {
     color: #000;
-    background-color: #aaa;
+    background-color: #fff;
 }
 .terminal .terminal-output div.error,
 .terminal .terminal-output div.error div {
@@ -148,7 +146,8 @@
     clear: both;
 }
 .terminal a {
-    color: #0f60ff;
+    text-decoration: underline;
+    color: #aaa;
 }
 .terminal a:hover {
     color: red;
