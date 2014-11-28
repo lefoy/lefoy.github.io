@@ -48,6 +48,7 @@ var terminal = (function(window, document, $) {
         terminalInit = function() {
 
             $body.append('<div id="terminal"></div>');
+            window.location.hash = 'terminal';
 
             terminal = $body.find('#terminal');
 
@@ -81,6 +82,7 @@ var terminal = (function(window, document, $) {
                     case 'exit':
                         $('#terminal').remove();
                         $body.css('overflow', 'auto');
+                        window.location.hash = '';
                         break;
                     default:
                         term.echo('command not found: ' + command + '\n');
