@@ -18,6 +18,10 @@ var terminal = (function(window, document, $) {
                 }
             });
 
+            if (window.location.hash === '#terminal') {
+                terminalInit();
+            }
+
         },
 
         layout = function() {
