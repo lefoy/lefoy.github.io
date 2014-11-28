@@ -4,3 +4,9 @@
 - name: jQuery-Snowfall
   description: Makes it snow on any web page or specific element.
   url: https://github.com/loktar00/JQuery-Snowfall
+- name: jQuery.terminal
+  description: jQuery Terminal Emulator
+  url: https://github.com/jcubic/jquery.terminal
+- name: konami-code
+  description: Using the Konami code easily configure and Easter Egg for your page or any element on the page.
+  url: https://github.com/tommcfarlin/konami-code
