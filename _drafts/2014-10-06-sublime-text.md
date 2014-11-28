@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sublime Text is awesome
+title: Sublime Text is Awesome
 permalink: sublime-text-is-awesome
 published: true
 ---
