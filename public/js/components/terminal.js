@@ -2,7 +2,8 @@ var terminal = (function(window, document, $) {
 
     'use strict';
 
-    var terminal,
+    var $window = $(window),
+        terminal,
 
         init = function() {
 
@@ -12,15 +13,17 @@ var terminal = (function(window, document, $) {
 
         bindEvents = function() {
 
-            $(window).konami({
+            $window.konami({
                 cheat: function() {
                     terminalInit();
                 }
             });
 
-            if (window.location.hash === '#terminal') {
-                terminalInit();
-            }
+            $window.on('hashchange', function() {
+                if (window.location.hash === '#terminal') {
+                    terminalInit();
+                }
+            }).trigger('hashchange');
 
         },
 
