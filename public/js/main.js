@@ -5,11 +5,42 @@ console.log(
 
 $(window).konami({
     cheat: function() {
-        alert('Cheat code activated!');
-
         $('body').append('<div id="terminal"></div>');
 
         var terminal = $('body').find('#terminal');
+
+        $('#terminal').terminal(function(command, term) {
+            switch (command) {
+                case 'help':
+                    term.echo(['',
+                        '    The most commonly used commands are:',
+                        '        github         Open the website Github repository',
+                        '        summary        Display information about the website',
+                        '        contact        Send email to website author',
+                        ''
+                    ].join('\n'));
+                    break;
+                case 'github':
+                    term.echo('github command...\n');
+                    break;
+                case 'summary':
+                    term.echo('summary command...\n');
+                    break;
+                case 'contact':
+                    term.echo('contact command...\n');
+                    break;
+                case 'exit':
+                    $('#terminal').remove();
+                    break;
+                default:
+                    term.echo('command not found: ' + command + '\n');
+            }
+        }, {
+            greetings: '',
+            name: 'terminal',
+            prompt: '> ',
+            exit: false
+        });
 
         terminal.css({
             position: 'fixed',
@@ -18,28 +49,8 @@ $(window).konami({
             width: '100%',
             height: '100%',
             color: '#fff',
-            zIndex: '9999',
-            backgroundColor: '#000'
-        });
-
-        $('#terminal').terminal(function(command, term) {
-            if (command !== '') {
-                try {
-                    var result = window.eval(command);
-                    if (result !== undefined) {
-                        term.echo(new String(result));
-                    }
-                } catch (e) {
-                    term.error(new String(e));
-                }
-            } else {
-                term.echo('');
-            }
-        }, {
-            greetings: 'Javascript Interpreter',
-            name: 'js_demo',
-            height: 200,
-            prompt: 'js> '
+            zIndex: '1000000',
+            backgroundColor: 'rgba(0, 0, 0, 0.9)'
         });
     }
 });
