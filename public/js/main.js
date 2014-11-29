@@ -15,6 +15,6 @@ jQuery(document).ready(function($) {
     banner();
 
     layout.init();
-    terminal.init();
+    term.init();
 
 });

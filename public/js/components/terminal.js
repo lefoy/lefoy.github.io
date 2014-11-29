@@ -1,111 +1,197 @@
-var terminal = (function(window, document, $) {
+var term = (function(window, document, $) {
 
     'use strict';
 
+    /*
+
+        TODO:
+
+        - commands
+          - twitter
+          - stackoverflow
+          - projects
+
+        - file system (cd, ls, cat)
+
+     */
+
     var $window = $(window),
         $body = $('body'),
+        $terminal,
         terminal,
 
-        init = function() {
+        indentChar = ' ',
+        indentWidth = 2,
+        maxBuffer = 15,
+        hash = '#terminal',
+        welcomeMessage = 'type \'help\' for a list of available commands\n',
 
-            bindEvents();
+        commands = [{
+            command: 'help',
+            action: function() {
+                terminal.echo(helpers.help.message());
+                terminal.echo('');
+            }
+        }, {
+            command: 'github',
+            action: function() {
+                helpers.redirect('https://github.com/lefoy/lefoy.github.io');
+            }
+        }, {
+            command: 'contact',
+            action: function() {
+                helpers.redirect('mailto:me@lefoy.net');
+            }
+        }, {
+            command: 'rm',
+            action: function() {
+                terminal.push(function(command) {
+                    if (command.match(/y|yes/i)) {
+                        terminal.echo('');
+                        $('.terminal-output').append(helpers.meme('rm-rf.jpg'));
+                        terminal.echo('');
+                        terminal.pop();
+                    } else if (command.match(/n|no/i)) {
+                        terminal.echo('');
+                        terminal.pop();
+                    }
+                }, {
+                    prompt: 'Are you sure? (y/n) '
+                });
+            }
+        }, {
+            command: 'sudo',
+            action: function() {
+                terminal.echo('');
+                $('.terminal-output').append(helpers.meme('rm-rf.jpg'));
+                terminal.echo('');
+            }
+        }, {
+            command: 'exit',
+            action: function() {
+                close();
+            }
+        }],
 
-        },
 
-        bindEvents = function() {
+        exec = function(command) {
+            var cmd = helpers.get.cmd(command),
+                current = _.findWhere(commands, {
+                    command: cmd
+                });
 
-            $window.konami({
-                cheat: function() {
-                    terminalInit();
-                }
-            });
-
-            $window.on('hashchange', function() {
-                if (window.location.hash === '#terminal') {
-                    terminalInit();
-                }
-            }).trigger('hashchange');
-
-        },
-
-        layout = function() {
-
-            terminal.css({
-                position: 'fixed',
-                top: '0',
-                left: '0',
-                width: '100%',
-                height: '100%',
-                color: '#fff',
-                zIndex: '1000000',
-                backgroundColor: '#000'
-            });
-
-            $body.css('overflow', 'hidden');
-
+            if (current) {
+                current.action();
+            } else {
+                terminal.echo('command not found: ' + cmd + '\n');
+                terminal.echo('type \'help\' for a list of available commands\n');
+            }
         },
 
         terminalInit = function() {
-
-            $body.append('<div id="terminal"></div>');
-            window.location.hash = 'terminal';
-
-            terminal = $body.find('#terminal');
-
-            $('#terminal').terminal(function(command, term) {
-                switch (command) {
-                    case '':
-                        break;
-                    case 'help':
-                        term.echo(['',
-                            '    list of available commands:',
-                            '        clear          Clean terminal output',
-                            '        github         Open the website Github repository',
-                            '        contact        Send email to website author',
-                            ''
-                        ].join('\n'));
-                        break;
-                    case 'github':
-                        cmd_redirect('https://github.com/lefoy/lefoy.github.io');
-                        break;
-                    case 'contact':
-                        cmd_redirect('mailto:me@lefoy.net');
-                        break;
-                    case 'rm -rf /':
-                    case 'rm -fr /':
-                    case 'rm -r /':
-                    case 'rm -f /':
-                        term.echo('\n');
-                        cmd_meme('rm-rf.jpg');
-                        term.echo('\n');
-                        break;
-                    case 'exit':
-                        $('#terminal').remove();
-                        $body.css('overflow', 'auto');
-                        window.location.hash = '';
-                        break;
-                    default:
-                        term.echo('command not found: ' + command + '\n');
-                        term.echo('type \'help\' for a list of available commands\n');
-                }
+            $terminal.terminal(function(command, term) {
+                terminal = term;
+                exec(command);
             }, {
-                greetings: 'type \'help\' for a list of available commands\n',
+                greetings: welcomeMessage,
                 name: 'terminal',
                 prompt: '> ',
                 exit: false
             });
-
-            layout();
-
         },
 
-        cmd_redirect = function(url) {
-            window.location.href = url;
+
+        create = function() {
+            $body.addClass('terminal').append('<div id="terminal"></div>');
+            $terminal = $body.find('#terminal');
+            window.location.hash = 'terminal';
+
+            terminalInit();
         },
 
-        cmd_meme = function(filename) {
-            $('.terminal-output').append('<img src="/public/img/terminal/' + filename + '" alt="" />');
+
+        close = function() {
+            $body.removeClass('terminal');
+            window.location.hash = '';
+            $window.isKonami = false;
+            $terminal.remove();
+        },
+
+
+        konami = function() {
+            $window.konami({
+                cheat: function() {
+                    $window.isKonami = true;
+                    create();
+                }
+            });
+        },
+
+
+        hashchange = function() {
+            $window.on('hashchange', function() {
+                if (window.location.hash === hash && !$window.isKonami) create()
+            }).trigger('hashchange');
+        },
+
+
+        bindEvents = function() {
+            konami();
+            hashchange();
+        },
+
+
+        init = function() {
+            bindEvents();
+        },
+
+
+        helpers = {
+            get: {
+                cmd: function(command) {
+                    return command.split(' ')[0];
+                },
+                arg: function(command) {
+                    var output = '';
+                    if (command.split(' ').length > 1) {
+                        output = command.split(' ')[1];
+                        if (output.charAt(0) === '-') {
+                            output = output.substring(1).split('');
+                        }
+                    }
+                    return output;
+                }
+            },
+            indent: function(level) {
+                return Array(level * indentWidth).join(indentChar);
+            },
+            buffer: function(string, position) {
+                var output,
+                    buffer = Array(maxBuffer - string.length).join(' ');
+                if (position === 'left') output = buffer + string;
+                if (position === 'right') output = string + buffer;
+                return output;
+            },
+            redirect: function(url) {
+                window.location.href = url;
+            },
+            meme: function(filename) {
+                return '<img src="/public/img/terminal/' + filename + '" alt="" />';
+            },
+            help: {
+                message: function() {
+                    return [
+                        '',
+                        helpers.indent(2) + 'list of available commands:',
+                        '',
+                        helpers.indent(4) + helpers.buffer('github', 'right') + 'Open the website Github repository',
+                        helpers.indent(4) + helpers.buffer('contact', 'right') + 'Send email to website author',
+                        ''
+                    ].join('\n');
+                }
+            }
         };
+
 
     return {
         init: init
