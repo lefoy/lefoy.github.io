@@ -28,23 +28,23 @@ var term = (function(window, document, $) {
 
         commands = [{
             command: 'help',
-            action: function() {
+            action: function(args) {
                 terminal.echo(helpers.help.message());
                 terminal.echo('');
             }
         }, {
             command: 'github',
-            action: function() {
+            action: function(args) {
                 helpers.redirect('https://github.com/lefoy/lefoy.github.io');
             }
         }, {
             command: 'contact',
-            action: function() {
+            action: function(args) {
                 helpers.redirect('mailto:me@lefoy.net');
             }
         }, {
             command: 'rm',
-            action: function() {
+            action: function(args) {
                 terminal.push(function(command) {
                     if (command.match(/y|yes/i)) {
                         terminal.echo('');
@@ -60,15 +60,20 @@ var term = (function(window, document, $) {
                 });
             }
         }, {
-            command: 'sudo',
-            action: function() {
-                terminal.echo('');
-                $('.terminal-output').append(helpers.meme('rm-rf.jpg'));
+            command: 'ls',
+            action: function(args) {
+                // if (_.contains(args, 'l')) {
+                //     terminal.echo(filesystem.listDirectory('list'));
+                // } else {
+                //     terminal.echo(filesystem.listDirectory());
+                // }
+                // terminal.echo('');
+                terminal.echo('Work in progress...');
                 terminal.echo('');
             }
         }, {
             command: 'exit',
-            action: function() {
+            action: function(args) {
                 close();
             }
         }],
@@ -76,12 +81,13 @@ var term = (function(window, document, $) {
 
         exec = function(command) {
             var cmd = helpers.get.cmd(command),
+                args = helpers.get.args(command),
                 current = _.findWhere(commands, {
                     command: cmd
                 });
 
             if (current) {
-                current.action();
+                current.action(args);
             } else {
                 terminal.echo('command not found: ' + cmd + '\n');
                 terminal.echo('type \'help\' for a list of available commands\n');
@@ -151,7 +157,7 @@ var term = (function(window, document, $) {
                 cmd: function(command) {
                     return command.split(' ')[0];
                 },
-                arg: function(command) {
+                args: function(command) {
                     var output = '';
                     if (command.split(' ').length > 1) {
                         output = command.split(' ')[1];
