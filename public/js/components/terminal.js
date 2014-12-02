@@ -192,6 +192,8 @@ var term = (function(window, document, $) {
                         '',
                         helpers.indent(4) + helpers.buffer('github', 'right') + 'Open the website Github repository',
                         helpers.indent(4) + helpers.buffer('contact', 'right') + 'Send email to website author',
+                        '',
+                        helpers.indent(2) + 'this terminal is still a work in progress...',
                         ''
                     ].join('\n');
                 }
