@@ -3,7 +3,14 @@
 ==============================*/
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     @include clearfix();
+}
+
+.flex-wrapper {
+    flex: 1;
 }
 
 .l-page-wrapper {
@@ -111,6 +118,9 @@ body {
 }
 
 .copyright {
+    .ie & {
+        display: none;
+    }
     p {
         margin: 0;
     }
@@ -169,4 +179,8 @@ body {
     bottom: 0;
     left: 0;
     overflow: hidden;
+}
+
+.snowfall-flakes {
+    z-index: 1 !important;
 }

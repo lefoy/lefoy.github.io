@@ -10,15 +10,15 @@ var layout = (function(window, document, $) {
 
             stickOnScroll();
             navigation();
-            //particles();
-            snow();
+
+            if (Detectizr.browser.name !== 'ie') {
+                //particles();
+                snow();
+            }
 
             if (windowWidth > 767) {
                 codeHoverEffect();
             }
-
-            var height = windowHeight - $('.project-header').outerHeight() - $('.copyright').outerHeight();
-            $('.project-content').css('min-height', height);
 
         },
 

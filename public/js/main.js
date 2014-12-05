@@ -1,3 +1,23 @@
+function safeconsole() {
+    var method,
+        noop = function() {},
+        methods = [
+            'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+            'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+            'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+            'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
+        ],
+        length = methods.length,
+        console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}
+
 function banner() {
     console.log(
         '%c lefoy.net   |   Tip: try the Konami code ',
@@ -12,9 +32,15 @@ function banner() {
 
 jQuery(document).ready(function($) {
 
+    safeconsole();
     banner();
 
-    layout.init();
-    term.init();
+    if (typeof layout !== undefined) {
+        layout.init();
+    }
+
+    if (typeof term !== undefined) {
+        term.init();
+    }
 
 });

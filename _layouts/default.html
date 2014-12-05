@@ -32,37 +32,39 @@
 </head>
 
 <body>
+    <div class="flex-wrapper">
 
-    {% include header.html %}
+        {% include header.html %}
 
-    <div class="project-content">
-        <div class="project-content-wrapper l-page-wrapper">
+        <div class="project-content">
+            <div class="project-content-wrapper l-page-wrapper">
 
-            {% if page.title != "Home" %}<p><a href="{{site.url}}"><i class="fa fa-long-arrow-left"></i> Back to home</a></p>{% endif %}
+                {% if page.title != "Home" %}<p><a href="{{site.url}}"><i class="fa fa-long-arrow-left"></i> Back to home</a></p>{% endif %}
 
-            {% if page.title != "Home" %}<h1>{{page.title}}</h1>{% endif %}
+                {% if page.title != "Home" %}<h1>{{page.title}}</h1>{% endif %}
 
-            <!-- Jekyll Generated Content -->
-            {{content}}
-            <!-- END Jekyll Generated Content -->
+                <!-- Jekyll Generated Content -->
+                {{content}}
+                <!-- END Jekyll Generated Content -->
 
-            {% if page.title != "Home" %}
-            <hr>
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-            var disqus_shortname = 'lefoy';
-            (function() {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
-            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-            {% endif %}
+                {% if page.title != "Home" %}
+                <hr>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                var disqus_shortname = 'lefoy';
+                (function() {
+                    var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript';
+                    dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                {% endif %}
+            </div>
         </div>
     </div>
 
@@ -83,17 +85,22 @@
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/modernizr.min.js"></script>
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/detectizr.min.js"></script>
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/jquery.stickOnScroll.min.js"></script>
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/moment.js"></script>
+
+    <!--[if gt IE 8]><!-->
+    <script type="text/javascript" src="{{site.url}}/public/js/vendor/prism.min.js"></script>
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/jquery.konami.min.js"></script>
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/jquery.terminal.min.js"></script>
-    <script type="text/javascript" src="{{site.url}}/public/js/vendor/prism.min.js"></script>
-    <script type="text/javascript" src="{{site.url}}/public/js/vendor/moment.js"></script>
-    <script type="text/javascript" src="{{site.url}}/public/js/vendor/gh3.js"></script>
     <script type="text/javascript" src="{{site.url}}/public/js/vendor/snowfall.jquery.min.js"></script>
     <!-- <script type="text/javascript" src="{{site.url}}/public/js/vendor/particles.min.js"></script> -->
+    <!--<![endif]-->
 
     <script type="text/javascript" src="{{site.url}}/public/js/components/layout.js"></script>
+
+    <!--[if gt IE 8]><!-->
     <script type="text/javascript" src="{{site.url}}/public/js/components/terminal.js"></script>
     <script type="text/javascript" src="{{site.url}}/public/js/components/filesystem.js"></script>
+    <!--<![endif]-->
 
     <script type="text/javascript" src="{{site.url}}/public/js/main.js"></script>
 
