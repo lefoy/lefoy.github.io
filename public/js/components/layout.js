@@ -12,8 +12,8 @@ var layout = (function(window, document, $) {
             navigation();
 
             if (Detectizr.browser.name !== 'ie') {
-                //particles();
-                snow();
+                particles();
+                //snow();
             }
 
             if (windowWidth > 767) {
