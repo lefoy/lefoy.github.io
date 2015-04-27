@@ -8,12 +8,12 @@
   url: http://lefoy.net/google-fonts/
   image: http://i.imgur.com/VSUBYVE.jpg
 
-- name: Grid
-  description: Just another simple sass grid system.
-  url: http://lefoy.net/grid/
-  image: http://i.imgur.com/KpwLMQl.jpg
+# - name: Grid
+#   description: Just another simple sass grid system.
+#   url: http://lefoy.net/grid/
+#   image: http://i.imgur.com/KpwLMQl.jpg
 
-- name: Experiments
-  description: CSS and JavaScript experiments.
-  url: http://lefoy.net/experiments/
-  image: http://i.imgur.com/K0XixIm.jpg
+# - name: Experiments
+#   description: CSS and JavaScript experiments.
+#   url: http://lefoy.net/experiments/
+#   image: http://i.imgur.com/K0XixIm.jpg

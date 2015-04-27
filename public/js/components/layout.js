@@ -25,8 +25,8 @@ var layout = (function(window, document, $) {
         stickOnScroll = function() {
 
             window.setTimeout(function() {
-                var ele = $('.project-content-navigation');
-                ele.css('height', ele.outerHeight()).stickOnScroll({
+                var element = $('.project-content-navigation');
+                element.css('height', element.outerHeight()).stickOnScroll({
                     topOffset: 10
                 });
             }, 100);
@@ -38,19 +38,19 @@ var layout = (function(window, document, $) {
             var elements = $('pre'),
                 wrapperWidth = $('.l-page-wrapper').width();
 
-            elements.each(function(index, el) {
-                var $el = $(el),
-                    width = $el.find('code').width();
+            elements.each(function(index, element) {
+                var $element = $(element),
+                    width = $element.find('code').width();
 
                 if (width > wrapperWidth) {
                     var maxWidth = $window.width() * 0.8;
 
-                    $el.css({
+                    $element.css({
                         width: wrapperWidth,
                         maxWidth: maxWidth
                     });
 
-                    $(el).hover(function() {
+                    $(element).hover(function() {
                         var marginLeft = (wrapperWidth - width) / 2;
 
                         if (width > maxWidth) {
@@ -58,12 +58,12 @@ var layout = (function(window, document, $) {
                             marginLeft = (maxWidth - wrapperWidth) / 2 * -1
                         }
 
-                        $el.css({
+                        $element.css({
                             width: width,
                             marginLeft: marginLeft
                         });
                     }, function() {
-                        $el.css({
+                        $element.css({
                             width: wrapperWidth,
                             marginLeft: 0
                         });
@@ -124,13 +124,13 @@ var layout = (function(window, document, $) {
 
         navigation = function() {
 
-            var $el,
+            var $element,
                 element;
             $('.project-content-left').append('<nav class="project-content-navigation"><ol></ol></nav>');
-            $('.project-content-right').find('h1, h2, h3').each(function(index, el) {
-                $el = $(el);
-                $el.attr('id', $el.text().replace(' ', '-').toLowerCase());
-                element = '<li><a href="#' + $el.attr('id') + '">' + $el.text() + '</a></li>';
+            $('.project-content-right').find('h1, h2, h3').each(function(index, element) {
+                $element = $(element);
+                $element.attr('id', $element.text().replace(' ', '-').toLowerCase());
+                element = '<li><a href="#' + $element.attr('id') + '">' + $element.text() + '</a></li>';
                 $('.project-content-left').find('.project-content-navigation ol').append(element);
             });
 
