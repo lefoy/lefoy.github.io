@@ -2,11 +2,11 @@
 title           : lefoy
 description     : "I'm a front-end Web developer from Quebec City, Canada."
 keywords        : "front-end front end web developer integrateur developpeur quebec"
-url             : http://0.0.0.0:4000
+url             : http://lefoy.net
 
 author          : lefoy
 name            : "lefoy"
-website         : http://0.0.0.0:4000/
+website         : http://lefoy.net/
 
 version         : 1.0.0
 markdown        : redcarpet
