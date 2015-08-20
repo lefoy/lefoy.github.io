@@ -39,8 +39,8 @@
 }
 
 .project-header {
-    height: auto !important;
-    padding: 0 !important;
+    // height: auto !important;
+    // padding: 0 !important;
     //background-image: url(http://lefoy.net/public/img/background-pattern.png);
     //background-position: center;
     background-color: #000;
@@ -49,6 +49,9 @@
         height: 100%;
         padding: 175px 0 95px;
         text-align: center;
+        .home & {
+            padding: 0;
+        }
     }
     canvas {
         //z-index: -1;

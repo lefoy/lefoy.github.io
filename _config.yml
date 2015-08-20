@@ -2,11 +2,11 @@
 title           : lefoy
 description     : "I'm a front-end Web developer from Quebec City, Canada."
 keywords        : "front-end front end web developer integrateur developpeur quebec"
-url             : http://lefoy.net
+url             : http://0.0.0.0:4000
 
 author          : lefoy
 name            : "lefoy"
-website         : http://lefoy.net/
+website         : http://0.0.0.0:4000/
 
 version         : 1.0.0
 markdown        : redcarpet
@@ -15,6 +15,7 @@ highlighter     : pygments
 github          : https://github.com/lefoy
 twitter         : https://twitter.com/louisetiennefoy
 stackoverflow   : http://stackoverflow.com/users/2141535/lefoy?tab=summary
+codepen         : http://codepen.io/lefoy
 repo            : https://github.com/lefoy/lefoy.github.io
 
 # Assets
