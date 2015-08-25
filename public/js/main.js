@@ -20,13 +20,13 @@ function safeconsole() {
 
 function banner() {
     console.log(
-        '%c lefoy.net   |   Tip: try the Konami code ',
+        '%c lefoy.net  |  Front-End Web Developer  ',
         'background: #000; color: #fff; padding: 10px 3px; line-height: 35px;'
     );
-    // console.log(
-    //     '%c --------- ↑ ↑ ↓ ↓ ← → ← → B A  --------- ',
-    //     'background: #000; color: #fff; padding: 10px 3px; line-height: 35px;'
-    // );
+    console.log(
+        '%c -------- ↑ ↑ ↓ ↓ ← → ← → B A  -------- ',
+        'background: #000; color: #fff; padding: 10px 3px; line-height: 35px;'
+    );
 }
 
 jQuery(document).ready(function($) {
