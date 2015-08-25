@@ -42,4 +42,6 @@ jQuery(document).ready(function($) {
         term.init();
     }
 
+    var terminal = term.create;
+
 });

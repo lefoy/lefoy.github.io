@@ -202,7 +202,8 @@ var term = (function(window, document, $) {
 
 
     return {
-        init: init
+        init: init,
+        create: create
     };
 
 })(window, document, $);
