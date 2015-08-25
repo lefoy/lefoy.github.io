@@ -136,7 +136,7 @@ var term = (function(window, document, $) {
 
         hashchange = function() {
             $window.on('hashchange', function() {
-                if (window.location.hash === hash && !$window.isKonami) create()
+                if (window.location.hash === hash && !$window.isKonami) create();
             }).trigger('hashchange');
         },
 
@@ -169,11 +169,11 @@ var term = (function(window, document, $) {
                 }
             },
             indent: function(level) {
-                return Array(level * indentWidth).join(indentChar);
+                return new Array(level * indentWidth).join(indentChar);
             },
             buffer: function(string, position) {
                 var output,
-                    buffer = Array(maxBuffer - string.length).join(' ');
+                    buffer = new Array(maxBuffer - string.length).join(' ');
                 if (position === 'left') output = buffer + string;
                 if (position === 'right') output = string + buffer;
                 return output;
@@ -202,8 +202,7 @@ var term = (function(window, document, $) {
 
 
     return {
-        init: init,
-        create: create
+        init: init
     };
 
 })(window, document, $);

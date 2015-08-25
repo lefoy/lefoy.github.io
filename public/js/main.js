@@ -42,6 +42,4 @@ jQuery(document).ready(function($) {
         term.init();
     }
 
-    window.terminal = term.create;
-
 });
